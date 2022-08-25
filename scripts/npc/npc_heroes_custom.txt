@@ -27,9 +27,21 @@
 	{
 		"override_hero"			"npc_dota_hero_beastmaster"
 		
-		
+		"Ability1"		"beastmaster_wild_axes"
+		"Ability2"		"beastmaster_call_of_the_wild_boar"
+		"Ability3"		"beastmaster_call_of_the_wild_hawk"
+		"Ability4"		"beastmaster_inner_beast"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"beastmaster_primal_roar"
+		"Ability7"		"generic_hidden"
 		"Ability10"		"special_bonus_attack_damage_300"
 		"Ability11"		"special_bonus_mp_regen_40"
+		"Ability12"		"special_bonus_unique_beastmaster_5"
+		"Ability13"		"special_bonus_unique_beastmaster_9"
+		"Ability14"		"special_bonus_unique_beastmaster_2"
+		"Ability15"		"special_bonus_unique_beastmaster_6"
+		"Ability16"		"special_bonus_unique_beastmaster_4"
+		"Ability17"		"special_bonus_unique_beastmaster_7"
 		
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -40,10 +52,20 @@
 	{
 		"override_hero"			"npc_dota_hero_brewmaster"
 		
+		"Ability1"		"brewmaster_thunder_clap"
+		"Ability2"		"brewmaster_cinder_brew"
+		"Ability3"		"brewmaster_drunken_brawler"
+		"Ability4"		"brewmaster_primal_companion"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"brewmaster_primal_split"
 		"Ability10"					"special_bonus_hp_regen_100"
 		"Ability11"					"special_bonus_attack_damage_250"
+		"Ability12"		"special_bonus_unique_brewmaster_5"
 		"Ability13"					"special_bonus_hp_7000"
+		"Ability14"		"special_bonus_unique_brewmaster"
 		"Ability15"					"special_bonus_attack_speed_160"
+		"Ability16"		"special_bonus_unique_brewmaster_6"
+		"Ability17"		"special_bonus_unique_brewmaster_4"
 		
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -347,8 +369,20 @@
 	"npc_dota_hero_axe_ebf"
 	{
 		"override_hero"				"npc_dota_hero_axe"
+		"Ability1"		"axe_berserkers_call"
+		"Ability2"		"axe_battle_hunger"
+		"Ability3"		"axe_counter_helix"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"axe_culling_blade"
 		"Ability10"					"special_bonus_strength_80"
-                "Ability15"					"special_bonus_all_stats_2500"
+		"Ability11"		"special_bonus_unique_axe_8"
+		"Ability12"		"special_bonus_unique_axe_6"
+		"Ability13"		"special_bonus_unique_axe_4"
+		"Ability14"		"special_bonus_unique_axe_5"
+        "Ability15"					"special_bonus_all_stats_2500"
+        "Ability16"		"special_bonus_unique_axe_2"
+		"Ability17"		"special_bonus_unique_axe"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 	"npc_dota_hero_nyx_assassin_ebf"
@@ -650,17 +684,40 @@
 	{
 		"override_hero"			"npc_dota_hero_centaur"
 		
+		"Ability1"		"centaur_hoof_stomp"
+		"Ability2"		"centaur_double_edge"
+		"Ability3"		"centaur_return"
+		"Ability4"		"centaur_mount"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"centaur_stampede"
 		"Ability10"				"special_bonus_hp_regen_25"
 		"Ability11"				"special_bonus_movement_speed_20"
 		"Ability12"				"special_bonus_strength_300"
+		"Ability13"		"special_bonus_unique_centaur_4"
+		"Ability14"		"special_bonus_unique_centaur_3"
+		"Ability15"		"special_bonus_unique_centaur_5"
+		"Ability16"		"special_bonus_unique_centaur_1"
+		"Ability17"		"special_bonus_unique_centaur_2"
 	}
 	"npc_dota_hero_alchemist_ebf"
 	{
 		"override_hero"			"npc_dota_hero_alchemist"
-		
-		"Ability12"				"special_bonus_hp_10000"
-		"Ability13"				"special_bonus_attack_speed_100"
-		"Ability14"				"special_bonus_all_stats_2000"
+
+		"Ability1"		"alchemist_acid_spray"
+		"Ability2"		"alchemist_unstable_concoction"
+		"Ability3"		"alchemist_goblins_greed"
+		"Ability4"		"alchemist_berserk_potion"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"alchemist_chemical_rage"
+		"Ability7"		"alchemist_unstable_concoction_throw"
+		"Ability10"		"special_bonus_unique_alchemist_5"
+		"Ability11"		"special_bonus_unique_alchemist"
+		"Ability12"		"special_bonus_unique_alchemist_3"
+		"Ability13"		"special_bonus_attack_speed_100"
+		"Ability14"		"special_bonus_all_stats_2000"
+		"Ability15"		"special_bonus_unique_alchemist_2"
+		"Ability16"		"special_bonus_unique_alchemist_6"
+		"Ability17"		"special_bonus_unique_alchemist_4"
 	}
 	"npc_dota_hero_lina_ebf"
 	{
@@ -733,11 +790,20 @@
 	"npc_dota_hero_dark_seer_ebf"
 	{
 		"override_hero"		"npc_dota_hero_dark_seer"
+		"Ability1"		"dark_seer_vacuum"
+		"Ability2"		"dark_seer_ion_shell"
+		"Ability3"		"dark_seer_surge"
+		"Ability4"		"dark_seer_normal_punch"
+		"Ability5"		"generic_hidden"
 		"Ability6"		"dark_seer_ishkafel_strength"
 		"Ability10"		"special_bonus_hp_regen_100"
 		"Ability11"		"special_bonus_armor_30"
+		"Ability12"		"special_bonus_unique_dark_seer_2"
 		"Ability13"		"special_bonus_unique_dark_seer_15"
 		"Ability14"     "special_bonus_unique_dark_seer_6"
+		"Ability15"		"special_bonus_unique_dark_seer"
+		"Ability16"		"special_bonus_unique_dark_seer_14"
+		"Ability17"		"special_bonus_unique_dark_seer_3"
 	}
 	"npc_dota_hero_dazzle_ebf"
 	{
@@ -777,8 +843,20 @@
 	"npc_dota_hero_abadon_ebf"
 	{	
 		"override_hero"		"npc_dota_hero_abaddon"
+		"Ability1"		"abaddon_death_coil"
+		"Ability2"		"abaddon_aphotic_shield"
+		"Ability3"		"abaddon_frostmourne"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"abaddon_borrowed_time"
+		"Ability10"		"special_bonus_unique_abaddon_6"
 		"Ability11"		"special_bonus_strength_80"
 		"Ability12"		"special_bonus_armor_12"
+		"Ability13"		"special_bonus_unique_abaddon_2"
+		"Ability14"		"special_bonus_unique_abaddon"
+		"Ability15"		"special_bonus_unique_abaddon_5"
+		"Ability16"		"special_bonus_unique_abaddon_3"
+		"Ability17"		"special_bonus_unique_abaddon_4"
 	}
 	"npc_dota_hero_vengeful_spirit_ebf"
 	{

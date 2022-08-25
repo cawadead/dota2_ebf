@@ -138,7 +138,11 @@
 				"special_bonus_unique_abaddon_3"	"-1"
 			}
 			"curse_duration"						"4.5 4.5 4.5 4.5 5.0 5.5 6.0"
-			"curse_slow"							"15 30 45 60 60 60 60"
+			"curse_slow"				
+			{
+				"value"									"15 30 45 60 60 60 60"
+				"special_bonus_unique_abaddon_6"		"+15"
+			}
 			"curse_attack_speed"					"40 60 80 100 120 140 160"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -263,6 +267,18 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"7340"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_abaddon_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"972"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass"						"special_bonus_base"

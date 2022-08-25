@@ -320,6 +320,45 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	//=================================================================================================================
+	// Brewmaster: Primal Companion
+	//=================================================================================================================
+	"brewmaster_primal_companion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"942"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Brewmaster.PrimalSplit.Spawn"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"MaxLevel"						"1"
+		"IsGrantedByScepter"			"1"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"cooldown_on_death"				"70"
+			"cooldown_on_take_damage"		"3"
+			"disable_distance"				"1600"
+			"cooldown_penalty_pct"			"100"
+			"movement_slow_when_out_of_range"		"50"
+		}
+	}
+	//=================================================================================================================
 	// Brewmaster Earth: Hurl Boulder
 	//=================================================================================================================
 	"brewmaster_earth_hurl_boulder"
@@ -425,7 +464,7 @@
 		"AbilitySound"					"Brewmaster_Storm.DispelMagic"
 		"MaxLevel"						"7"
 
-		"AbilityCastRange"				"500 500 500 500"
+		"AbilityCastRange"				"500"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -434,7 +473,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75 75 75 75"		
+		"AbilityManaCost"				"75"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -469,7 +508,7 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"MaxLevel"						"7"
 
-		"AbilityCastRange"				"600 600 600 600"
+		"AbilityCastRange"				"600"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -478,7 +517,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150 150 150 150"		
+		"AbilityManaCost"				"150"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -517,7 +556,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75 75 75 75"		
+		"AbilityManaCost"				"75"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -596,8 +635,8 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"						"430000"
-				"ad_linked_abilities"		"brewmaster_primal_split"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value"				"1200"
+				"ad_linked_abilities"			"brewmaster_primal_split"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -749,5 +788,17 @@
 				"ad_linked_abilities"			"brewmaster_thunder_clap"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_brewmaster_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"960"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
 	}
 }
