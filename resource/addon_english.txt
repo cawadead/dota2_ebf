@@ -2469,7 +2469,7 @@
 		"DOTA_Tooltip_ability_dark_seer_ishkafel_strength"										"IshKafel Power"
 		"DOTA_Tooltip_ability_dark_seer_ishkafel_strength_Description"							"Dark Seer gains bonus strength and magical resistance."
 		"DOTA_Tooltip_ability_dark_seer_ishkafel_strength_bonus_strength"						"BONUS STRENGTH:"
-		//"DOTA_Tooltip_ability_dark_seer_ishkafel_strength_magic_resist"							"BONUS MAGICAL RESISTANCE:" 
+		"DOTA_Tooltip_ability_dark_seer_ishkafel_strength_magic_resist"							"BONUS MAGICAL RESISTANCE:" 
 
 		"DOTA_Tooltip_ability_alchemist_goblins_greed_Description"								"Alchemist synthesizes additional gold from his enemies. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next %duration% seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, gold gained from Midas items benefits Alchemist more."
 		"DOTA_Tooltip_ability_alchemist_goblins_greed_bounty_multiplier"						"MIDAS GOLD MULTIPLIER:"

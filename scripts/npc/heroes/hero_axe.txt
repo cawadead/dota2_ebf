@@ -126,6 +126,11 @@
 				{
 					"special_bonus_scepter"				"14"
 				}
+				"speed_bonus"
+				{
+					"value"			"0"
+					"special_bonus_unique_axe_8"	"+10"
+				}
 		}		
 	}
 	
@@ -177,7 +182,7 @@
 			}
 			"shard_damage_reduction"
 			{
-				"special_bonus_shard"		"+4"
+				"special_bonus_shard"		"+15"
 			}
 			"shard_max_stacks"
 			{
@@ -236,8 +241,8 @@
 				"value"							"2500 23000 120000 360000 660000 980000"
 				"special_bonus_unique_axe_5"	"+80000"
 			}
-			"speed_bonus"				"20 25 30"
-			"atk_speed_bonus"				"40 70 150"
+			"speed_bonus"				"20 25 30 35 40 45"
+			"atk_speed_bonus"				"40 55 70 90 120 150"
 			"speed_duration"			"6"
 			"speed_aoe"					"1200"
 			"charge_speed"				"1200"
@@ -258,7 +263,7 @@
 		"ID"					"6102"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"axe_battle_hunger"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.		
+		"BaseClass"						"special_bonus_base"		
 	}
 
 	//=================================================================================================================
@@ -271,7 +276,20 @@
 		"ID"					"6608"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"axe_berserkers_call"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		"BaseClass"						"special_bonus_base"	
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_axe_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6815"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"	
 	}
 
 	//=================================================================================================================
@@ -284,7 +302,7 @@
 		"ID"					"6991"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"axe_counter_helix"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		"BaseClass"						"special_bonus_base"	
 	}
 
 	//=================================================================================================================
@@ -297,7 +315,7 @@
 		"ID"					"562"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"axe_culling_blade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		"BaseClass"						"special_bonus_base"	
 
 	}
 
@@ -311,6 +329,32 @@
 		"ID"					"670"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"axe_battle_hunger"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		"BaseClass"						"special_bonus_base"	
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_axe_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"974"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"	
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_axe_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"9401"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"	
 	}
 }

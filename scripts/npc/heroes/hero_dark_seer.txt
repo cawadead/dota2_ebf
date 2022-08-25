@@ -346,7 +346,7 @@
 		"AbilityValues"
 		{
 			"bonus_strength"			"60 190 420 950 2250 5350"
-			//"magic_resist"				"5 10 15 20 22.5 25 27.5"
+			"magic_resist"				"5 10 15 20 22.5 25 27.5"
 		}
 		
 		"Modifiers"
@@ -358,7 +358,7 @@
 				"Properties"
 		        {
 		        	"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_agility"
-		        	//"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "%magic_resist"
+		        	"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "%magic_resist"
 		        }
 			}
 		}
