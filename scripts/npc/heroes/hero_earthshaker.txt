@@ -24,7 +24,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"1400"
-		"AbilityCastPoint"				"0.69 0.69 0.69 0.69"
+		"AbilityCastPoint"				"0.69"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -137,7 +137,7 @@
 			{
 				"value"		"100 200 300 400 500 600 700"
 				"CalculateSpellDamageTooltip"	"0"
-				"special_bonus_unique_earthshaker_totem_damage"	"+50"
+				"special_bonus_unique_earthshaker_totem_damage"	"+100"
 			}
 			"distance_scepter"			
 			{
@@ -309,7 +309,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"1.5"
+				"value"				"2"
 				"ad_linked_abilities"			"earthshaker_enchant_totem"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -332,8 +332,8 @@
 		{
 			"01"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"value"							"20000"
+				"var_type"					"FIELD_INTEGER"
+				"value"				"130000"
 				"ad_linked_abilities"			"earthshaker_echo_slam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -381,7 +381,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"21500"
+				"value"				"5000"
 				"ad_linked_abilities"			"earthshaker_fissure"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
