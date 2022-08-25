@@ -1,0 +1,479 @@
+"DOTAAbilities"
+{
+	"item_phase_boots2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"boots/phase_boots2"
+		"FightRecapLevel"				"2"
+		
+		"precache"
+		{
+			"particle"		"particles/items2_fx/phase_boots.vpcf"
+			"soundfile"		"game_sounds_heroes/game_sounds_items.vsndevts"
+		}
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"7"
+		"AbilityDuration"				"5"
+		"HasPureCooldown"				"1"
+		"AbilitySharedCooldown"			"phase"
+		"AbilityThreat"					"-25"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2300"
+		"ItemShopTags"					"agi;int;str;armor;boost_health"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"mechanism;mekansm"
+		"ItemAlertable"					"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityValues"
+		{
+			"bonus_movement_speed"			"55"
+			"bonus_damage"					"180"
+			"phase_movement_speed"			"40"
+			"phase_movement_speed_range"	"20"
+			"phase_duration"				"3.0"
+			"bonus_armor"					"12"
+			"bonus_hp_regen"				"15"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"lua_item/phase"
+				"Function"				"ApplyPhase"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_phase_boots_passive"
+			{	
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%bonus_damage"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bonus_hp_regen"
+				}
+			}
+			"modifier_phase_boots_boost"
+			{	
+				"IsBuff"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%phase_movement_speed"
+					"MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE"	"%phase_movement_speed"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_phase_boots_boost_ranged"
+			{	
+				"IsBuff"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%phase_movement_speed_range"
+					"MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE"	"%phase_movement_speed_range"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	"item_phase_boots3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"boots/phase_boots3"
+		"FightRecapLevel"				"2"
+		
+		"precache"
+		{
+			"particle"		"particles/items2_fx/phase_boots.vpcf"
+			"soundfile"		"game_sounds_heroes/game_sounds_items.vsndevts"
+		}
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"7"
+		"AbilityDuration"				"5"
+		"HasPureCooldown"				"1"
+		"AbilitySharedCooldown"			"phase"
+		"AbilityThreat"					"-25"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2300"
+		"ItemShopTags"					"agi;int;str;armor;boost_health"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"mechanism;mekansm"
+		"ItemAlertable"					"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityValues"
+		{
+			"bonus_movement_speed"			"65"
+			"bonus_damage"					"720"
+			"phase_movement_speed"			"60"
+			"phase_movement_speed_range"	"30"
+			"phase_duration"				"3.0"
+			"bonus_armor"					"13"
+			"bonus_hp_regen"				"40"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"lua_item/phase"
+				"Function"				"ApplyPhase"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_phase_boots_passive"
+			{	
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%bonus_damage"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bonus_hp_regen"
+				}
+			}
+			"modifier_phase_boots_boost"
+			{	
+				"IsBuff"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%phase_movement_speed"
+					"MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE"	"%phase_movement_speed"
+					"MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT"	"1"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_phase_boots_boost_ranged"
+			{	
+				"IsBuff"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%phase_movement_speed_range"
+					"MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE"	"%phase_movement_speed_range"
+					"MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT"	"1"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	"item_phase_boots4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"boots/phase_boots4"
+		"FightRecapLevel"				"2"
+		
+		"precache"
+		{
+			"particle"		"particles/items2_fx/phase_boots.vpcf"
+			"soundfile"		"game_sounds_heroes/game_sounds_items.vsndevts"
+		}
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"7"
+		"AbilityDuration"				"5"
+		"HasPureCooldown"				"1"
+		"AbilitySharedCooldown"			"phase"
+		"AbilityThreat"					"-25"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2300"
+		"ItemShopTags"					"agi;int;str;armor;boost_health"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"mechanism;mekansm"
+		"ItemAlertable"					"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityValues"
+		{
+			"bonus_movement_speed"			"75"
+			"bonus_damage"					"2475"
+			"phase_movement_speed"			"80"
+			"phase_movement_speed_range"	"40"
+			"phase_duration"				"3.0"
+			"bonus_armor"					"14"
+			"bonus_hp_regen"				"80"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"lua_item/phase"
+				"Function"				"ApplyPhase"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_phase_boots_passive"
+			{	
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%bonus_damage"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bonus_hp_regen"
+				}
+			}
+			"modifier_phase_boots_boost"
+			{	
+				"IsBuff"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%phase_movement_speed"
+					"MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE"	"%phase_movement_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_MAX"				"9999"
+					"MODIFIER_PROPERTY_MOVESPEED_LIMIT"				"9999"
+					"MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT"	"1"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_phase_boots_boost_ranged"
+			{	
+				"IsBuff"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%phase_movement_speed_range"
+					"MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE"	"%phase_movement_speed_range"
+					"MODIFIER_PROPERTY_MOVESPEED_MAX"				"9999"
+					"MODIFIER_PROPERTY_MOVESPEED_LIMIT"				"9999"
+					"MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT"	"1"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	"item_phase_boots5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"boots/phase_boots5"
+		"FightRecapLevel"				"2"
+		
+		"precache"
+		{
+			"particle"		"particles/items2_fx/phase_boots.vpcf"
+			"soundfile"		"game_sounds_heroes/game_sounds_items.vsndevts"
+		}
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"7"
+		"AbilityDuration"				"5"
+		"HasPureCooldown"				"1"
+		"AbilitySharedCooldown"			"phase"
+		"AbilityThreat"					"-25"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2300"
+		"ItemShopTags"					"agi;int;str;armor;boost_health"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"mechanism;mekansm"
+		"ItemAlertable"					"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityValues"
+		{
+			"bonus_movement_speed"			"85"
+			"bonus_damage"					"8100"
+			"phase_movement_speed"			"100"
+			"phase_movement_speed_range"	"50"
+			"phase_duration"				"3.0"
+			"bonus_armor"					"15"
+			"bonus_hp_regen"				"160"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"lua_item/phase"
+				"Function"				"ApplyPhase"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_phase_boots_passive"
+			{	
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%bonus_damage"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bonus_hp_regen"
+				}
+			}
+			"modifier_phase_boots_boost"
+			{	
+				"IsBuff"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%phase_movement_speed"
+					"MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE"	"%phase_movement_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_MAX"				"9999"
+					"MODIFIER_PROPERTY_MOVESPEED_LIMIT"				"9999"
+					"MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT"	"1"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_phase_boots_boost_ranged"
+			{	
+				"IsBuff"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%phase_movement_speed_range"
+					"MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE"		"%phase_movement_speed_range"
+					"MODIFIER_PROPERTY_MOVESPEED_MAX"				"9999"
+					"MODIFIER_PROPERTY_MOVESPEED_LIMIT"				"9999"
+					"MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT"	"1"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	"item_recipe_phase_boots2"
+	{
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"						"item_recipe_blade_mail"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_phase_boots2"
+		"ItemRequirements"
+		{
+			"01"						"item_phase_boots;item_relic;item_helm_of_mithril_will"
+		}
+	}
+	"item_recipe_phase_boots3"
+	{
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"						"item_recipe_blade_mail"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_phase_boots3"
+		"ItemRequirements"
+		{
+			"01"						"item_phase_boots2;item_scythe_2"
+		}
+	}
+	"item_recipe_phase_boots4"
+	{
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"						"item_recipe_blade_mail"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_phase_boots4"
+		"ItemRequirements"
+		{
+			"01"						"item_phase_boots3;item_scythe_3"
+		}
+	}
+	"item_recipe_phase_boots5"
+	{
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"						"item_recipe_blade_mail"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_phase_boots5"
+		"ItemRequirements"
+		{
+			"01"						"item_phase_boots4;item_scythe_4"
+		}
+	}
+}

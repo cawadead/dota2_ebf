@@ -1,0 +1,198 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: Battlefury 2
+	//=================================================================================================================
+	"item_recipe_bfury2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_bfury"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bfury2"
+		"ItemRequirements"
+		{
+			"01"						"item_bfury;item_relic;item_hyperstone_2"
+		}
+	}	
+	
+	//=================================================================================================================
+	// Battlefury2
+	//=================================================================================================================
+	"item_bfury2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3030"
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"AbilityTextureName"			"item_bfury2"
+		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bf;battle fury"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		
+    	"Modifiers"
+    	{	
+		    "war_fury_passive"
+		    {
+		        "Passive" "1"  
+		        "IsHidden" "1"  
+		        "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+		            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+		            "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_health_regen"
+		            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_regen"
+		        }
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"Splash"
+						"damage_on_hit"		"%attack_damage"
+					}
+					"FireEffect"
+					{
+						"EffectName" "particles/items_fx/battlefury_cleave.vpcf"
+						"Target" "TARGET"
+						"EffectAttachType" "follow_origin"
+						"EffectRadius" "%radius"
+					}
+					"FireSound"
+					{
+						"Target" "TARGET"
+						"EffectName" "sounds/items/item_armlet_deactivate.vsnd"
+					}
+				}
+		    }
+
+		}
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"120"
+			"bonus_damage"			"240"
+			"bonus_health_regen"	"22.5"
+			"bonus_mana_regen"		"6.9"
+			"radius"				"400"
+			"splash_damage"			"40"
+			"splash_damage_ranged"	"20"
+		}
+	}
+	"item_recipe_storm_fury"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_bfury"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_storm_fury"
+		"ItemRequirements"
+		{
+			"01"						"item_bfury2;item_hyperstone_3;item_scythe_2"
+		}
+	}
+	"item_storm_fury"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_storm_fury"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"14200"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"bfury,battefury"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"precache"
+			{
+			    "particle" "particles/storm_fury_effect.vpcf"
+			    "soundfile" "sounds/items/item_armlet_deactivate.vsnd"
+			}
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+		    "storm_fury_passive"
+		    {
+		        "Passive" "1"  
+		        "IsHidden" "1"  
+		        "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+		            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+		            "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_health_regen"
+		            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_regen"
+		        }
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"Splash"
+						"damage_on_hit"		"%attack_damage"
+					}
+					"FireEffect"
+					{
+						"EffectName" "particles/items_fx/battlefury_cleave.vpcf"
+						"Target" "TARGET"
+						"EffectAttachType" "follow_origin"
+						"EffectRadius" "%radius"
+					}
+					"FireSound"
+					{
+						"Target" "TARGET"
+						"EffectName" "sounds/items/item_armlet_deactivate.vsnd"
+					}
+				}
+		    }
+
+		}
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"180"
+			"bonus_damage"			"810"
+			"bonus_health_regen"	"67.5"
+			"bonus_mana_regen"		"17.5"
+			"radius"				"400"
+			"splash_damage"			"50"
+			"splash_damage_ranged"	"25"
+		}
+	}
+}

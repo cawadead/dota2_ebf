@@ -1,0 +1,765 @@
+"DOTAAbilities"
+{
+	//======================================================================================================
+	//==============Bloodye Haleberd================================================================================
+	//======================================================================================================
+	"item_recipe_bloody_halberd"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_heavens_halberd"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bloody_halberd"
+		"ItemRequirements"
+		{
+			"01"						"item_heavens_halberd;item_orb_1"
+		}
+	}
+	"item_bloody_halberd"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_heavens_halberd"
+		"AbilityTextureName"			"snynk/halberd_2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"2940"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityCooldown" 				"17"
+		"AbilityManaCost"				"100"
+		"AbilityCastRange"				"600"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"25"
+			}	
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"65"
+			}		
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"disarm_range"			"5.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"disarm_melee"			"3.0"
+			}	
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"status_resistance"		"16"
+			}							
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_amp"			"20"
+			}		
+		}
+	}
+	//======================================================================================================
+	//==============S&Y2================================================================================
+	//======================================================================================================
+	"item_recipe_sny_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1221"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_sny_2"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sny_2"
+		"ItemRequirements"
+		{
+			"01"						"item_sange_and_yasha;item_butterfly2;item_bloody_halberd;item_orb_2"
+		}
+	}
+	"item_sny_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1222"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"snynk/sny_2"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"10000"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityCooldown" 				"17"
+		"AbilityManaCost"				"100"
+		"AbilityCastRange"				"600"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"				"TARGET"
+				"ModifierName"		"item_sange_and_yasha_2_disarm"
+			}
+		}
+		"Modifiers"
+		{
+    		"item_sange_and_yasha_2_stats"
+    		{
+		        "Passive" "1"  
+		        "IsHidden" "1"  
+		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+		            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+		            "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
+		            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+		        	"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_speed"
+		        	"MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE" "%hp_regen_amp"
+		        	"MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE" "%hp_regen_amp"
+		        	"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "%status_resistance"
+		        	"MODIFIER_PROPERTY_EVASION_CONSTANT" "%bonus_evasion"
+		        }
+		    }
+		    "item_sange_and_yasha_2_disarm"
+    		{
+    			"OnCreated"
+    			{
+    				"FireSound"
+    				{
+    				"EffectName" "sounds/items/heavens_halberd.vsnd"
+    				"Target" "TARGET"
+    				}
+    				"AttachEffect"
+    				{
+    				"EffectName" "particles/items2_fx/heavens_halberd.vpcf"
+    				"EffectAttachType" "follow_overhead"
+    				"Target" "TARGET"
+    				}
+
+    			}
+		        "IsDebuff" "1"  
+		        "duration" "%disarm_duration"
+		        "States"
+		        {
+		            "MODIFIER_STATE_DISARMED" "MODIFIER_STATE_VALUE_ENABLED"
+		        }
+		    }
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_evasion"						"30"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_agi"							"170"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_str"							"150"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_speed"						"12"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_damage"						"435"
+			}
+			"06"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_attackspeed"					"55"
+			}
+			"07"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"status_resistance"					"24"
+			}
+			"08"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"hp_regen_amp"						"26"
+			}
+			"09"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"disarm_duration"					"3"
+			}
+		}
+	}
+	//======================================================================================================
+	//==============S&Y2================================================================================
+	//======================================================================================================
+	"item_recipe_sny_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_sny_3"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sny_3"
+		"ItemRequirements"
+		{
+			"01"						"item_sny_2;item_booster_2;item_orb_3"
+		}
+	}
+	"item_sny_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"snynk/sny_3"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"34000"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityCooldown" 				"16"
+		"AbilityManaCost"				"100"
+		"AbilityCastRange"				"600"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"				"TARGET"
+				"ModifierName"		"item_sange_and_yasha_2_disarm"
+			}
+		}
+		"Modifiers"
+		{
+			"item_sange_and_yasha_3_stats"
+    		{
+		        "Passive" "1"  
+		        "IsHidden" "1"  
+		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+		            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+		        	"MODIFIER_PROPERTY_HEALTH_BONUS" 			"%bonus_health"
+		        	"MODIFIER_PROPERTY_MANA_BONUS" 			"%bonus_mana"
+		            "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
+		            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+		        	"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_speed"
+		        	"MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE" "%hp_regen_amp"
+		        	"MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE" "%hp_regen_amp"
+		        	"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "%status_resistance"
+		        	"MODIFIER_PROPERTY_EVASION_CONSTANT" "%bonus_evasion"
+		        }
+		    }
+		    "item_sange_and_yasha_2_disarm"
+    		{
+    			"OnCreated"
+    			{
+    				"FireSound"
+    				{
+    				"EffectName" "sounds/items/heavens_halberd.vsnd"
+    				"Target" "TARGET"
+    				}
+    				"AttachEffect"
+    				{
+    				"EffectName" "particles/items2_fx/heavens_halberd.vpcf"
+    				"EffectAttachType" "follow_overhead"
+    				"Target" "TARGET"
+    				}
+
+    			}
+		        "IsDebuff" "1"  
+		        "duration" "%disarm_duration"
+		        "States"
+		        {
+		            "MODIFIER_STATE_DISARMED" "MODIFIER_STATE_VALUE_ENABLED"
+		        }
+		    }
+		    "say3_booster_effect"
+     		{
+     			"Passive"                	"1"
+     			"IsHidden"                  "1"
+     			"OnCreated"
+     			{
+	     			"RunScript"
+		        	{
+		        		"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"booster_1"
+		        	}
+     			}
+     			"OnRemoved"
+     			{
+	     			"RunScript"
+		        	{
+		        		"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"booster_1_end"
+		        	}
+     			}
+	    	}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_evasion"						"35"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_agi"							"525"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_str"							"510"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_speed"						"14"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_damage"						"995"
+			}
+			"06"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_attackspeed"					"70"
+			}
+			
+			"07"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_health"						"27500"
+			}
+			"08"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_mana"						"3400"
+			}
+			"09"
+	        {
+	            "var_type"							"FIELD_INTEGER"
+	            "health_per_str"					"10"
+	        }
+			"10"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"status_resistance"					"28"
+			}
+			"11"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"hp_regen_amp"						"30"
+			}
+			"12"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"disarm_duration"					"3"
+			}
+		}
+	}
+	//======================================================================================================
+	//==============blood cursed============================================================================
+	//======================================================================================================
+	"item_recipe_sny_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sny_4"
+		"ItemRequirements"
+		{
+			"01"						"item_zero;item_sny_3;item_orb_4"
+		}
+	}
+	"item_sny_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2003"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"snynk/sny_4"
+		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"34000"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityCooldown" 				"15"
+		"AbilityManaCost"				"100"
+		"AbilityCastRange"				"600"
+	
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"				"TARGET"
+				"ModifierName"		"item_sange_and_yasha_2_disarm"
+			}
+		}
+		"Modifiers"
+		{
+			"passive_sange_and_yasha_4"
+			{
+				"Passive" "1"
+				"IsHidden" "1"
+				"AllowIllusionDuplicate"    "0"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"Target"			"CASTER"
+						"EffectName"		"particles/generic_aoe_persistent_circle_1/zero_restoration_flame.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"ControlPoints"
+								{
+									"00"		"0 0 0"
+									"01"		"%impact_radius 0 0"
+									"02"		"0 0 0"
+								}
+					}
+				}
+		    }
+			"item_sange_and_yasha_4_stats"
+			{
+				"Passive" "1"  
+				"IsHidden" "1"  
+				"Aura" "item_say4_debuff"
+				"Aura_Radius" "1500"
+				"Aura_Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" "DOTA_UNIT_TARGET_ALL"
+				"Aura_Flag"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_all"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_all"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_all"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_speed"
+					"MODIFIER_PROPERTY_HEALTH_BONUS" 			"%bonus_health"
+					"MODIFIER_PROPERTY_MANA_BONUS" 			"%bonus_health"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT" "%bonus_evasion"
+					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+					"MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE" "%hp_regen_amp"
+					"MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE" "%hp_regen_amp"
+					"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "%status_resistance"
+				}
+			}
+		    "item_sange_and_yasha_4_debuff"
+	    	{
+		        "IsDebuff" "1"  
+		        "duration" "%duration"
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%slow_percentage"
+		            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
+		            "MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_SOURCE" "%healing_reduction"
+		            "MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE" "%healing_reduction"
+		            "MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE" "%healing_reduction"
+		            "MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE" "%healing_reduction"
+		        }
+		    }
+		    "item_sange_and_yasha_2_disarm"
+	    	{
+				"OnCreated"
+				{
+					"FireSound"
+					{
+					"EffectName" "sounds/items/heavens_halberd.vsnd"
+					"Target" "TARGET"
+					}
+					"AttachEffect"
+					{
+					"EffectName" "particles/items2_fx/heavens_halberd.vpcf"
+					"EffectAttachType" "follow_overhead"
+					"Target" "TARGET"
+					}
+
+				}
+		        "IsDebuff" "1"  
+		        "duration" "%disarm_duration"
+		        "States"
+		        {
+		            "MODIFIER_STATE_DISARMED" "MODIFIER_STATE_VALUE_ENABLED"
+		        }
+		    }
+			"health_booster_effect"		
+	      	{		
+				"Passive"                	"1"		
+				"IsHidden"                  "1"		
+				"OnCreated"				
+				{		
+					"ApplyModifier"
+				{
+					"ModifierName"	"health_booster_check"
+					"Target"		"CASTER"
+				}
+				}		
+				"OnDestroy"		
+				{		
+					"RemoveModifier"		
+					{		
+						"ModifierName" "health_booster_check"		
+						"Target" "CASTER"		
+					}		
+				}		
+				"OnDeath"
+				{
+					"RemoveModifier"		
+	 			        {		
+	 			            "ModifierName" "health_booster"		
+	 			            "Target" "CASTER"		
+	 			        }
+				}
+	 	    }		
+			"health_booster_check"
+			{
+				"IsHidden"                  "1"
+				"OnCreated"
+				{
+					"RunScript"		
+	 		        	{		
+	 		        		"ScriptFile"			"lua_item/simple_item.lua"		
+	 						"Function"				"booster_1Apply"		
+	 		        	}	
+				}
+				"ThinkInterval"				"0.3"
+	      			"OnIntervalThink"			
+	      			{		
+	 	     			"RunScript"		
+	 		        	{		
+	 		        		"ScriptFile"			"lua_item/simple_item.lua"		
+	 						"Function"				"booster_1Test"		
+	 		        	}		
+	      			}		
+	      			"OnDestroy"		
+	      			{			
+	 		        	"RemoveModifier"		
+	 			        {		
+	 			            "ModifierName" "health_booster"		
+	 			            "Target" "CASTER"		
+	 			        }		
+	      			}
+				
+			}
+			"health_booster"		
+			{		
+				"IsHidden"                  "1"		
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"		
+				"Properties"		
+				{		
+						"MODIFIER_PROPERTY_HEALTH_BONUS" 			"%health_per_str"		
+				}		
+			}
+			"item_say4_debuff"
+	    	{
+		        "IsDebuff" "1"  
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%slow_percentage_aura"
+		            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow_aura"
+		            "MODIFIER_PROPERTY_MISS_PERCENTAGE" "%miss_chance"
+		        }
+		        "ThinkInterval"			"1"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Type"			"DAMAGE_TYPE_PURE"
+						"Damage"		"%damage_per_tick"
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Radius"	"%damage_radius"
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_ALL"
+						}
+					}
+							
+				}
+		    }
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_evasion"						"40"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_all"							"1800"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_speed"						"16"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_damage"						"2600"
+			}
+			"06"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_attackspeed"					"90"
+			}
+			
+			"07"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_health"						"83000"
+			}
+			"08"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_mana"						"5200"
+			}
+			"09"
+	        {
+	            "var_type"							"FIELD_INTEGER"
+	            "health_per_str"					"10"
+	        }
+			"10"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"status_resistance"					"32"
+			}
+			"11"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"hp_regen_amp"						"34"
+			}
+			"12"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"disarm_duration"					"3"
+			}
+			"13"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"damage_radius"						"700"
+			}
+			"14"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"damage_per_tick"					"20480"
+			}
+			"15"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"miss_chance"						"10"
+			}
+			"16"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"slow_percentage_aura"				"-10"
+			}
+			"17"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"attack_speed_slow_aura"			"-85"
+			}
+			"17"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"healing_reduction"					"-40"
+			}
+		}
+	}
+}

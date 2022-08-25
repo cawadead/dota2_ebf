@@ -1,0 +1,362 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Centaur Warchief: Hoof Stomp
+	//=================================================================================================================
+	"centaur_hoof_stomp"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5514"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Centaur.HoofStomp"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
+		"AbilityCooldown"				"18 16 14 12 10.66 9.33 8"
+		"AbilityManaCost"				"100 130 160 190 220 250 280"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"								"350"
+			"stomp_damage"							"1200 2700 6100 14000 31000 69500 160000"
+			"stun_duration"					
+			{
+				"value"								"2.0 2.2 2.4 2.6 2.7 2.8 2.9"
+				"special_bonus_unique_centaur_2" 	"+1.0"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Centaur Warchief: Double Edge
+	//=================================================================================================================
+	"centaur_double_edge"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5515"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Centaur.DoubleEdge"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+        "HasShardUpgrade"             "1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"4.0"
+		"AbilityCastRange"				"150 150 150 150"
+		"AbilityCastPoint"				"0.3"
+
+		//------------------------------------------------------------------------------
+		"AbilityManaCost"				"0 0 0 0"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"edge_damage"							"1200 2700 6100 14000 31000 69500 160000"
+			"strength_damage"
+			{
+				"value"								"60 80 100 120 130 140 150"
+				"special_bonus_unique_centaur_4" 	"+40"
+			}
+			"radius"						"220"
+			"shard_str_pct"
+			{
+				"special_bonus_shard"		"+15"
+			}
+			"shard_str_duration"
+			{
+				"special_bonus_shard"		"+15"
+			}
+			"shard_max_stacks"
+			{
+				"special_bonus_shard"		"+5"
+			}
+			"shard_movement_slow"
+			{
+				"special_bonus_shard"		"+25"
+			}
+			"shard_movement_slow_duration"
+			{
+				"special_bonus_shard"		"+2"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Centaur Warchief: Return (Retaliate)
+	//=================================================================================================================
+	"centaur_return"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5516"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"return_damage"				
+				{
+					"value"								"150 360 865 2100 5000 12000 29000"
+					"special_bonus_unique_centaur_3"	"+11000"
+				}
+				"return_damage_str"						"20 26 32 38 40 42 44"
+				"aura_radius"							"1200"
+		}
+	}
+
+	//=================================================================================================================
+	// Centaur: Stampede
+	//=================================================================================================================
+	"centaur_stampede"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5517"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Centaur.Stampede"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		"MaxLevel"						"6"
+		"LevelsBetweenUpgrades"			"6"
+		
+        "HasScepterUpgrade"             "1"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 250 350 450 550 650 750"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.2"	// hits everything on the map
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"			
+			{
+				"value"								"3.5 4 4.5 5.5 6 6.5"
+				"special_bonus_unique_centaur_7"	"+1"
+			}
+			"scepter_bonus_duration"     
+			{
+				"special_bonus_scepter"		"+1"
+			}
+			"base_damage"		"0"
+			"strength_damage"	
+			{
+				"value"							"5 12.5 20 25 45 67.5"			
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"slow_duration"		"2.5"
+			"radius"			"105"
+			"slow_movement_speed"			"100"
+			"damage_reduction"	
+			{
+				"special_bonus_scepter"	"25 30 35 40 45 50"
+			}
+			"AbilityCooldown"
+			{
+				"value"					"100"
+				"special_bonus_unique_centaur_5"	"-25"
+			}
+			"has_flying_movement"	
+			{
+				"special_bonus_scepter"	"+1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Centaur: Overrun
+	//=================================================================================================================
+	"centaur_overrun"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"581"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Centaur.Stampede"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.2"	// hits everything on the map
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"2.0"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_centaur_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6322"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"1"
+				"ad_linked_abilities"			"centaur_return"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_centaur_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5988"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"centaur_hoof_stomp"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_centaur_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6616"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"centaur_return"						// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_centaur_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6617"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"centaur_double_edge"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_centaur_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"453"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"centaur_stampede"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_centaur_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"615"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"50"
+				"ad_linked_abilities"			"centaur_stampede"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_centaur_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"696"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"centaur_stampede"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+}

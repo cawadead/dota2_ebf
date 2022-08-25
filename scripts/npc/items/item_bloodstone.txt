@@ -1,0 +1,260 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: bloodstone2
+	//=================================================================================================================
+	"item_recipe_bloodstone2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_bloodstone"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bloodstone2"
+		"ItemRequirements"
+		{
+			"01"						"item_bloodstone;item_orb_1"
+		}
+	}
+	
+	//=================================================================================================================
+	// bloodstone
+	//=================================================================================================================
+	"item_bloodstone2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_bloodstone.lua"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"AbilityTextureName"			"bloodstone/bloodstone2"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"30.0"
+		"AbilityManaCost"				"0"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1220"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"bloodstone"
+		"ItemDeclarations"				"DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityValues"
+		{
+			"bonus_health"			"1450"
+			"bonus_mana"			"1450"
+			"bonus_all"				"30"
+			"spell_lifesteal"		"35"
+			"buff_duration"			"6"
+			"lifesteal_multiplier"	"2"
+			"hp_cost"				"10"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: bloodstone3
+	//=================================================================================================================
+	"item_recipe_bloodstone3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_bloodstone"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"			"bloodstone/bloodstone3"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bloodstone3"
+		"ItemRequirements"
+		{
+			"01"						"item_bloodstone2;item_orb_2"
+		}
+	}
+	//=================================================================================================================
+	// bloodstone
+	//=================================================================================================================
+	"item_bloodstone3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_bloodstone.lua"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"AbilityTextureName"			"bloodstone/bloodstone3"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"30.0"
+		"AbilityManaCost"				"0"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1220"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"bloodstone"
+		"ItemDeclarations"				"DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"4150"
+			"bonus_mana"			"4150"
+			"bonus_all"				"120"
+			"spell_lifesteal"		"40"
+			"buff_duration"			"6"
+			"lifesteal_multiplier"	"2"
+			"hp_cost"				"10"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Divine bloodstone
+	//=================================================================================================================
+	"item_recipe_bloodstone4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_bloodstone"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_bloodstone5"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bloodstone4"
+		"ItemRequirements"
+		{
+			"01"						"item_bloodstone3;item_orb_3"
+		}
+	}
+
+	//=================================================================================================================
+	// divine soul
+	//=================================================================================================================
+	"item_bloodstone4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_bloodstone.lua"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"AbilityTextureName"			"bloodstone/bloodstone4"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"30.0"
+		"AbilityManaCost"				"0"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1220"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"bloodstone"
+		"ItemDeclarations"				"DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityValues"
+		{
+			"bonus_health"			"15000"
+			"bonus_mana"			"6000"
+			"bonus_all"				"395"
+			"spell_lifesteal"		"45"
+			"buff_duration"			"6"
+			"lifesteal_multiplier"	"2"
+			"hp_cost"				"10"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Divine bloodstone
+	//=================================================================================================================
+	"item_recipe_bloodstone5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_bloodstone"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_bloodstone5"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bloodstone5"
+		"ItemRequirements"
+		{
+			"01"						"item_bloodstone4;item_orb_4"
+		}
+	}
+
+	//=================================================================================================================
+	// divine soul
+	//=================================================================================================================
+	"item_bloodstone5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_bloodstone.lua"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"AbilityTextureName"			"bloodstone/bloodstone5"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"30.0"
+		"AbilityManaCost"				"0"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1220"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"bloodstone"
+		"ItemDeclarations"				"DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityValues"
+		{
+			"bonus_health"			"80000"
+			"bonus_mana"			"10000"
+			"bonus_all"				"1400"
+			"spell_lifesteal"		"50"
+			"buff_duration"			"6"
+			"lifesteal_multiplier"	"2"
+			"hp_cost"				"10"
+		}
+	}
+}

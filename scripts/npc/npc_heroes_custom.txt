@@ -1,0 +1,812 @@
+"DOTAHeroes"
+{
+
+	"npc_dota_hero_base_ebf"
+	{
+		"override_hero"     "npc_dota_hero_base"
+
+
+		"StatusHealth"				"200"									// Base health.
+		"StatusMana"				"300"										// Base mana.
+	}
+	/=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_arc_warden_ebf"
+	{
+		"override_hero"			"npc_dota_hero_arc_warden"
+		
+		"Ability11"				"special_bonus_hp_4000"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	/=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_beastmaster_ebf"
+	{
+		"override_hero"			"npc_dota_hero_beastmaster"
+		
+		
+		"Ability10"		"special_bonus_attack_damage_300"
+		"Ability11"		"special_bonus_mp_regen_40"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	/=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_brewmaster_ebf"
+	{
+		"override_hero"			"npc_dota_hero_brewmaster"
+		
+		"Ability10"					"special_bonus_hp_regen_100"
+		"Ability11"					"special_bonus_attack_damage_250"
+		"Ability13"					"special_bonus_hp_7000"
+		"Ability15"					"special_bonus_attack_speed_160"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	/=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_bristleback_ebf"
+	{
+		"override_hero"			"npc_dota_hero_bristleback"
+		
+		"Ability10"				"special_bonus_attack_damage_250"
+		"Ability11"				"special_bonus_mp_regen_8"
+		"Ability12"				"special_bonus_hp_4000"
+		"Ability13"				"special_bonus_attack_speed_30"
+		"Ability14"				"special_bonus_hp_regen_4000"
+		"Ability16"				"special_bonus_spell_lifesteal_12"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	/=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_batrider_ebf"
+	{
+		"override_hero"			"npc_dota_hero_batrider"
+		
+		"Ability12"				"special_bonus_movement_speed_20"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	/=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_void_spirit_ebf"
+	{
+		"override_hero"			"npc_dota_hero_void_spirit"
+		
+		"Ability10"					"special_bonus_mp_regen_10"
+		"Ability14"					"special_bonus_spell_amplify_25"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	/=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_windranger_ebf"
+	{
+		"override_hero"			"npc_dota_hero_windrunner"
+		
+		"Ability10"					"special_bonus_mp_regen_10"
+		"Ability14"					"special_bonus_spell_amplify_25"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_chen_ebf"
+	{
+		"override_hero"			"npc_dota_hero_chen"
+		"Ability3"				"lion_finger_of_death"
+		"Ability6"					"chen_holy_bless"					// Ability 4
+		"Ability10"					"special_bonus_mp_regen_1"					// Ability 4
+		"Ability14"					"special_bonus_mp_regen_2"					// Ability 4
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_clinkz_ebf"
+	{
+		"override_hero"			"npc_dota_hero_clinkz"
+		"Ability6"					"clinkz_death_pact_custom"					// Ability 4
+		
+		
+		"Ability13"				"special_bonus_agility_500"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: doom
+	//=================================================================================================================
+	"npc_dota_hero_doom_bringer_ebf"
+	{
+		"override_hero"			"npc_dota_hero_doom_bringer"
+		"Ability1"					"doom_devour"					// Ability 2
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+		"Ability17"				"special_bonus_doom_randomonium"
+	}
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_ember_spirit_ebf"
+	{
+		"override_hero"			"npc_dota_hero_ember_spirit"
+		
+		"Ability10"				"special_bonus_attack_damage_250"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_gyrocopter_ebf"
+	{
+		"override_hero"			"npc_dota_hero_gyrocopter"
+		
+		"Ability11"				"special_bonus_hp_2000"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_invoker_ebf"
+	{
+		"override_hero"			"npc_dota_hero_invoker"
+		"AbilityLayout"				"5"
+		"Ability1"					"invoker_fire_ellement"					// Ability 1
+		"Ability2"					"invoker_ice_ellement"					// Ability 2
+		"Ability3"					"invoker_wind_ellement"					// Ability 3
+		"Ability4"					"invoker_combine"					// Ability 4
+		"Ability5"					"generic_hidden"					// Ability 5
+		"Ability6"					"invoker_reset"					// Ability 6
+		"Ability17"		"special_bonus_unique_invoker_10"
+		"Ability18"		"special_bonus_unique_invoker_6"
+		"Ability19"		"special_bonus_unique_invoker_1"
+		"Ability20"		"special_bonus_unique_invoker_9"
+		"Ability21"		"special_bonus_unique_invoker_4"
+		"Ability22"		"special_bonus_unique_invoker_5"
+		"Ability23"		"special_bonus_unique_invoker_2"
+		"Ability24"		"special_bonus_unique_invoker_3"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: outworld
+	//=================================================================================================================
+	"npc_dota_hero_obsidian_destroyer_ebf"
+	{
+		"override_hero"			"npc_dota_hero_obsidian_destroyer"
+		"Ability6"					"outworld_otherworld_ressource"					// Ability 2
+		"Ability10"		"special_bonus_hp_2000"
+		"Ability11"		"special_bonus_attack_speed_20"
+		"Ability12"		"special_bonus_intelligence_400"
+		"Ability13"		"special_bonus_movement_speed_30"
+		"Ability14"		"special_bonus_strength_800"
+		"Ability15"		"special_bonus_unique_outworld_devourer_3"
+		"Ability16"		"special_bonus_unique_outworld_devourer"
+		"Ability17"		"special_bonus_spell_lifesteal_30"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: Pudge !
+	//=================================================================================================================
+	"npc_dota_hero_pudge_ebf"
+	{
+		"override_hero"			"npc_dota_hero_pudge"
+		"Ability3"					"pudge_flesh_heap_datadriven"					// Ability 4
+		"Ability14"				"special_bonus_mp_regen_2"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: Razor
+	//=================================================================================================================
+	"npc_dota_hero_razor_ebf"
+	{
+		"override_hero"			"npc_dota_hero_razor"
+		"Ability2"					"razor_damage_link"					// Ability 2
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_skywrath_mage_ebf"
+	{
+		"override_hero"			"npc_dota_hero_skywrath_mage"
+		"Ability2"					"skywrath_mage_concussive_shot_datadriven"					// Ability 4
+		"Ability6"					"skywrath_mage_mystic_flare_datadriven"					// Ability 4
+		"Ability16"				"special_bonus_mp_regen_4"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: slark
+	//=================================================================================================================
+	"npc_dota_hero_slark_ebf"
+	{
+		"override_hero"			"npc_dota_hero_slark"
+		"Ability3"					"slark_ebf_damage_steal"					// Ability 2
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: slark
+	//=================================================================================================================
+	"npc_dota_hero_sniper_ebf"
+	{
+		"override_hero"			"npc_dota_hero_sniper"
+		
+		"Ability11"				"special_bonus_attack_damage_250"
+		"Ability14"				"special_bonus_all_stats_500"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: Legion comander
+	//=================================================================================================================
+	"npc_dota_hero_spectre_ebf"
+	{
+		"override_hero"			"npc_dota_hero_spectre"
+		
+		"Ability4"				"generic_hidden"
+		"Ability5"				"generic_hidden"
+		"Ability6"				"spectre_ebf_haunt"
+		
+		"Ability11"		"special_bonus_all_stats_50"
+		"Ability14"		"special_bonus_hp_7000"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: Legion comander
+	//=================================================================================================================
+	"npc_dota_hero_terrorblade_ebf"
+	{
+		"Ability1"				"terrorblade_attack_speed"
+		"override_hero"			"npc_dota_hero_terrorblade"
+		
+		"Ability12"		"special_bonus_hp_6500"
+		"Ability14"		"special_bonus_all_stats_500"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: Legion comander
+	//=================================================================================================================
+	"npc_dota_hero_troll_warlord_ebf"
+	{
+		"override_hero"			"npc_dota_hero_troll_warlord"
+		
+		"Ability15"				"special_bonus_attack_damage_600"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_undying_ebf"
+	{
+		"override_hero"			"npc_dota_hero_undying"
+		"Ability1"					"undying_decay_ebf"					// Ability 4
+		"Ability2"					"undying_soul_rip_ebf"					// Ability 4
+		"Ability3"					"undying_summon_zombies"					// Ability 4
+		"Ability16"					"special_bonus_centaur_stomp_radius"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	} 
+	
+	
+	
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_ursa_ebf"
+	{
+		"override_hero"			"npc_dota_hero_ursa"
+		
+		"Ability11"				"special_bonus_mp_regen_10"
+		"Ability12"				"special_bonus_agility_300"
+		"Ability13"				"special_bonus_hp_7000"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	//=================================================================================================================
+	// HERO: Legion comander
+	//=================================================================================================================
+	"npc_dota_hero_legion_ebf"
+	{
+		"override_hero"			"npc_dota_hero_legion_commander"
+		"Ability1"					"legion_commander_overwhelming_odds"					// Ability 1
+		"Ability2"					"legion_commander_press_the_attack"					// Ability 2
+		"Ability3"					"legion_commander_moment_of_courage"						// Ability 3
+		"Ability6"				"lc_ebf_war_fury"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_zuus_ebf"
+	{
+		"override_hero"			"npc_dota_hero_zuus"
+		
+		"Ability6"				"zeus_ebf_thundergod_legacy"
+		
+		"Ability10"				"special_bonus_mp_regen_8"
+		"Ability11"				"special_bonus_movement_speed_20"
+		"Ability12"				"special_bonus_hp_7000"
+		"Ability14"				"special_bonus_intelligence_1000"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_tinker_ebf"
+	{
+		"override_hero"			"npc_dota_hero_tinker"
+		"Ability2"				"tinker_missile_ebf"
+		"Ability6"				"tinker_rearm_datadriven"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_axe_ebf"
+	{
+		"override_hero"				"npc_dota_hero_axe"
+		"Ability10"					"special_bonus_strength_80"
+                "Ability15"					"special_bonus_all_stats_2500"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_nyx_assassin_ebf"
+	{
+		"override_hero"			"npc_dota_hero_nyx_assassin"
+		"Ability2"				"nyx_hide"
+		"Ability3"				"nyx_assassin_carapace"
+		"Ability11"				"special_bonus_mp_regen_2"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_witch_doctor_ebf"
+	{
+		"override_hero"			"npc_dota_hero_witch_doctor"
+		"Ability6"				"witch_doctor_witch_control"
+		"Ability13"				"special_bonus_mp_regen_2"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	
+	"npc_dota_hero_kunkka_ebf"
+	{
+		"override_hero"			"npc_dota_hero_kunkka"
+		
+		"Ability10"				"special_bonus_attack_damage_150"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_lifestealer_ebf"
+	{
+		"override_hero"			"npc_dota_hero_life_stealer"
+		
+		"Ability10"				"special_bonus_attack_speed_30"
+		"Ability12"				"special_bonus_attack_damage_250"
+		"Ability13"				"special_bonus_hp_6500"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_lycan_ebf"
+	{
+		"override_hero"			"npc_dota_hero_lycan"
+		
+		"Ability10"				"special_bonus_unique_lycan_6"
+		"Ability11"				"special_bonus_unique_lycan_3"
+		"Ability12"				"special_bonus_unique_lycan_7"
+		"Ability13"				"special_bonus_unique_lycan_8"
+		"Ability14"				"special_bonus_unique_lycan_1"
+		"Ability15"				"special_bonus_unique_lycan_4"
+		"Ability17"				"special_bonus_unique_lycan_2"
+		"Ability16"				"special_bonus_unique_lycan_5"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_wisp_ebf"
+	{
+		"override_hero"			"npc_dota_hero_wisp"
+		"Ability6"				"wisp_sacrifice"
+		
+		"Ability10"				"special_bonus_hp_regen_20"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_crystal_maiden_ebf"
+	{
+		"override_hero"			"npc_dota_hero_crystal_maiden"
+		"Ability2"				"crystal_maiden_crystal_spear"
+		"Ability3"				"crystal_maiden_frozen_aura"
+		"Ability10"				"special_bonus_hp_2500"
+		"Ability14"				"special_bonus_attack_speed_400"
+		"VisionNighttimeRange"		"1800"	
+	}								// Range of vision at night time.
+	"npc_dota_hero_bloodseeker_ebf"
+	{
+		"override_hero"			"npc_dota_hero_bloodseeker"
+		"Ability3"				"Blood_Seeker_Blood_Smell"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}				// Range of vision at night time.
+	"npc_dota_hero_broodmother_ebf"
+	{
+		"override_hero"			"npc_dota_hero_broodmother"
+		
+		"Ability13"		"special_bonus_agility_16"
+		"Ability15"		"special_bonus_hp_400"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_viper_ebf"
+	{
+		"override_hero"			"npc_dota_hero_viper"
+		
+		"Ability10"		"special_bonus_attack_speed_20"
+		"Ability13"		"special_bonus_hp_6500"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_juggernaut_ebf"
+	{
+		"override_hero"			"npc_dota_hero_juggernaut"
+		
+		"Ability10"		"special_bonus_all_stats_50"
+		"Ability16"		"special_bonus_hp_130000"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_lone_druid_ebf"
+	{
+		"override_hero"			"npc_dota_hero_lone_druid"
+		
+		"Ability10"				"special_bonus_hp_2000"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_spirit_breaker"
+	{
+		"override_hero"			"npc_dota_hero_spirit_breaker"
+		"Ability1"				"spirit_breaker_ground_smash"
+		"Ability2"				"spirit_breaker_haste_armor"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_necrolyte_ebf"
+	{
+		"override_hero"			"npc_dota_hero_necrolyte"
+		"Ability6"				"necro_death_aura"
+		"Ability15"				"special_bonus_intelligence_1000"
+		"Ability16"				"special_bonus_movement_speed_40"
+		"Ability11"				"special_bonus_strength_240"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_death_prophet_ebf"
+	{
+		"override_hero"			"npc_dota_hero_death_prophet"
+		
+		"Ability10"				"special_bonus_attack_damage_150"
+		"Ability11"				"special_bonus_magic_resistance_12"
+		"Ability15"				"special_bonus_hp_24000"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_leshrac_ebf"
+	{
+		"override_hero"			"npc_dota_hero_leshrac"
+		
+		"Ability10"				"special_bonus_mp_regen_40"
+		"Ability14"				"special_bonus_intelligence_2000"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_omniknight_ebf"
+	{
+		"override_hero"			"npc_dota_hero_omniknight"
+		"Ability11"			"special_bonus_attack_damage_250"
+	}
+
+	"npc_dota_hero_jakiro_ebf"
+	{
+		"override_hero"			"npc_dota_hero_jakiro"
+		"Ability11"			"special_bonus_spell_amplify_15"
+		"Ability13"			"special_bonus_hp_6500"
+	}
+	"npc_dota_hero_ancient_apparition_ebf"
+	{
+		"override_hero"			"npc_dota_hero_ancient_apparition"
+		"Ability10"				"special_bonus_mp_regen_2"
+	}
+	"npc_dota_hero_silencer_ebf"
+	{
+		"override_hero"			"npc_dota_hero_silencer"
+		"Ability12"				"special_bonus_mp_regen_2"
+	}
+	"npc_dota_hero_chaos_knight_ebf"
+	{
+		"override_hero"			"npc_dota_hero_chaos_knight"
+		
+		"Ability13"		"special_bonus_strength_240"
+		
+	}
+	"npc_dota_hero_ogre_magi_ebf"
+	{
+		"override_hero"			"npc_dota_hero_ogre_magi"
+		"Ability12"			"special_bonus_attack_damage_600"
+		"Ability13"				"special_bonus_hp_5000"
+		"Ability14"			"special_bonus_strength_800"
+	}
+	"npc_dota_hero_disruptor_ebf"
+	{
+		"override_hero"			"npc_dota_hero_disruptor"
+		"Ability14"				"special_bonus_mp_regen_2"
+	}
+	"npc_dota_hero_tusk_ebf"
+	{
+		"override_hero"			"npc_dota_hero_tusk"
+		"Ability10"				"special_bonus_mp_regen_2"
+		"Ability11"				"special_bonus_mp_regen_1"
+	}
+	"npc_dota_hero_earth_spirit_ebf"
+	{
+		"override_hero"			"npc_dota_hero_earth_spirit"
+		"Ability15"				"special_bonus_mp_regen_2"
+	}
+	"npc_dota_hero_phoenix_ebf"
+	{
+		"override_hero"			"npc_dota_hero_phoenix"
+	}
+	"npc_dota_hero_tiny_ebf"
+	{
+		"override_hero"			"npc_dota_hero_tiny"
+	}
+	"npc_dota_hero_oracle_ebf"
+	{
+		"override_hero"			"npc_dota_hero_oracle"
+		"Ability11"				"special_bonus_mp_regen_1"
+		"Ability13"				"special_bonus_mp_regen_2"
+	}
+	"npc_dota_hero_antimage_ebf"
+	{
+		"override_hero"			"npc_dota_hero_antimage"
+		"Ability10"				"special_bonus_strength_110"
+	}
+
+	//Somebody will love you techies
+	"npc_dota_hero_techies_ebf"
+	{
+		"override_hero"			"npc_dota_hero_techies"
+		"Ability10"				"special_bonus_mp_regen_1"
+		"Ability15"				"special_bonus_mp_regen_2"
+	}
+
+	"npc_dota_hero_winter_wyvern_ebf"
+	{
+		"override_hero"			"npc_dota_hero_winter_wyvern"
+		"Ability10"				"special_bonus_mp_regen_2"
+	}
+	"npc_dota_hero_puck_ebf"
+	{
+		"override_hero"			"npc_dota_hero_puck"
+	}
+	"npc_dota_hero_pugna_ebf"
+	{
+		"override_hero"			"npc_dota_hero_pugna"
+		"Ability11"				"special_bonus_hp_2000"
+	}
+	"npc_dota_hero_queenofpain_ebf"
+	{
+		"override_hero"			"npc_dota_hero_queenofpain"
+		"Ability10"		"special_bonus_attack_damage_200"
+		"Ability11"		"special_bonus_strength_110"
+	}
+	"npc_dota_hero_visage_ebf"
+	{
+		"override_hero"			"npc_dota_hero_visage"
+	}
+	"npc_dota_hero_lich_ebf"
+	{
+		"override_hero"			"npc_dota_hero_lich"
+	}
+
+	"npc_dota_hero_lion_ebf"
+	{
+		"override_hero"			"npc_dota_hero_lion"
+		
+		"Ability6"				"special_bonus_spell_amplify_15"
+		"Ability11"				"special_bonus_attack_damage_300"
+		"Ability13"				"special_bonus_finger_of_death_health_per_kill"
+		"Ability14"				"special_bonus_all_stats_500"
+		"Ability17"				"special_bonus_spell_lifesteal_30"					
+	}
+
+	"npc_dota_hero_enigma_ebf"
+	{
+		"override_hero"			"npc_dota_hero_enigma"
+		"Ability14"				"special_bonus_hp_24000"
+	}
+
+	"npc_dota_hero_venomancer_ebf"
+	{
+		"override_hero"			"npc_dota_hero_venomancer"
+		"Ability11"				"special_bonus_mp_regen_2"
+	}
+
+	"npc_dota_hero_dragon_knight_ebf"
+	{
+		"override_hero"			"npc_dota_hero_dragon_knight"
+		
+		"Ability10"				"special_bonus_attack_damage_250"
+		"Ability13"				"special_bonus_hp_8000"
+		"Ability15"				"special_bonus_strength_400"
+	}
+	"npc_dota_hero_skeleton_king_ebf"
+	{
+		"override_hero"			"npc_dota_hero_skeleton_king"
+		
+		"Ability10"				"special_bonus_movement_speed_20"
+		"Ability11"				"special_bonus_attack_speed_45"
+		"Ability14"				"special_bonus_cleave_25"
+	}
+	"npc_dota_hero_ancient_apparition_ebf"
+	{
+		"override_hero"			"npc_dota_hero_ancient_apparition"
+		"Ability3"				"ancient_apparition_chilling_touch"
+	} 
+	"npc_dota_hero_centaur_ebf"
+	{
+		"override_hero"			"npc_dota_hero_centaur"
+		
+		"Ability10"				"special_bonus_hp_regen_25"
+		"Ability11"				"special_bonus_movement_speed_20"
+		"Ability12"				"special_bonus_strength_300"
+	}
+	"npc_dota_hero_alchemist_ebf"
+	{
+		"override_hero"			"npc_dota_hero_alchemist"
+		
+		"Ability12"				"special_bonus_hp_10000"
+		"Ability13"				"special_bonus_attack_speed_100"
+		"Ability14"				"special_bonus_all_stats_2000"
+	}
+	"npc_dota_hero_lina_ebf"
+	{
+		"override_hero"			"npc_dota_hero_lina"
+		
+		
+		"Ability10"		"special_bonus_attack_damage_250"
+		"Ability12"		"special_bonus_hp_7000"
+		"Ability14"		"special_bonus_spell_amplify_20"
+	}
+	"npc_dota_hero_naga_siren_ebf"
+	{
+		"override_hero"			"npc_dota_hero_naga_siren"
+		
+		"Ability13"				"special_bonus_strength_300"
+	}
+	"npc_dota_hero_phantom_assassin_ebf"
+	{
+		"override_hero"			"npc_dota_hero_phantom_assassin"
+	}
+	"npc_dota_hero_phantom_lancer"
+	{
+		"override_hero"			"npc_dota_hero_phantom_lancer"
+		"Ability10"				"special_bonus_hp_1500"
+		"Ability12"				"special_bonus_strength_300"
+		"Ability17"				"special_bonus_12_crit_2"
+	}
+	"npc_dota_hero_medusa_ebf"
+	{
+		"override_hero"			"npc_dota_hero_medusa"
+		
+		"Ability16"				"special_bonus_intelligence_6000"
+	}
+	"npc_dota_hero_morphling_ebf"
+	{
+		"override_hero"			"npc_dota_hero_morphling"
+		"Ability6"				"morphling_equalize"
+		"Ability18"				"special_bonus_agility_300"
+		"Ability19"				"special_bonus_strength_800"
+	}
+	"npc_dota_hero_storm_spirit_ebf"
+	{
+		"override_hero"			"npc_dota_hero_storm_spirit"
+		
+		"Ability10"				"special_bonus_attack_speed_20"
+		"Ability11"				"special_bonus_mp_regen_10"
+		"Ability12"				"special_bonus_hp_5000"
+	}
+	"npc_dota_hero_sven_ebf"
+	{
+		"override_hero"			"npc_dota_hero_sven"
+	}
+	"npc_dota_hero_treant_ebf"
+	{
+		"override_hero"			"npc_dota_hero_treant"
+		"Ability16"		"special_bonus_treant_socsok"
+	}
+	"npc_dota_hero_warlock_ebf"
+	{
+		"override_hero"			"npc_dota_hero_warlock"
+		"Ability12"		"special_bonus_unique_warlock_1"
+		"Ability17"		"special_bonus_centaur_stomp_radius"
+	}
+	
+	"npc_dota_hero_bane_ebf"
+	{
+		"override_hero"		"npc_dota_hero_bane"
+		"Ability10"		"special_bonus_armor_25"
+	}
+	"npc_dota_hero_dark_seer_ebf"
+	{
+		"override_hero"		"npc_dota_hero_dark_seer"
+		"Ability6"		"dark_seer_ishkafel_strength"
+		"Ability10"		"special_bonus_hp_regen_100"
+		"Ability11"		"special_bonus_armor_30"
+		"Ability13"		"special_bonus_unique_dark_seer_15"
+		"Ability14"     "special_bonus_unique_dark_seer_6"
+	}
+	"npc_dota_hero_dazzle_ebf"
+	{
+		"override_hero"		"npc_dota_hero_dazzle"
+		"Ability10"		"special_bonus_attack_damage_250"
+		"Ability11"		"special_bonus_mp_regen_875"
+		"Ability13"		"special_bonus_attack_speed_90"
+	}
+	"npc_dota_hero_earthshaker_ebf"
+	{
+		"override_hero"		"npc_dota_hero_earthshaker"
+		"Ability10"		"special_bonus_attack_damage_30"
+	}
+	"npc_dota_hero_enchantress_ebf"
+	{
+		"override_hero"		"npc_dota_hero_enchantress"
+		"Ability12"		"special_bonus_attack_damage_450"
+	}
+	"npc_dota_hero_furion_ebf"
+	{
+		"override_hero"		"npc_dota_hero_furion"
+		"Ability10"			"special_bonus_unique_furion"
+		"Ability12"			"special_bonus_attack_speed_30"
+		"Ability17"			"special_bonus_unique_furion_6"
+		
+	}
+	"npc_dota_hero_night_stalker_ebf"
+	{
+		"override_hero"		"npc_dota_hero_night_stalker"
+		"Ability15"		"special_bonus_strength_800"
+	}
+	"npc_dota_hero_slardar_ebf"
+	{
+		"override_hero"		"npc_dota_hero_slardar"
+		"Ability12"		"special_bonus_hp_6500"
+	}
+	"npc_dota_hero_abadon_ebf"
+	{	
+		"override_hero"		"npc_dota_hero_abaddon"
+		"Ability11"		"special_bonus_strength_80"
+		"Ability12"		"special_bonus_armor_12"
+	}
+	"npc_dota_hero_vengeful_spirit_ebf"
+	{
+		"override_hero"		"npc_dota_hero_vengefulspirit"
+		"Ability11"			"special_bonus_agility_40"
+	}
+	/=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_weaver_ebf"
+	{
+		"override_hero"			"npc_dota_hero_weaver"
+		
+		"Ability11"				"special_bonus_strength_240"
+		"Ability12"				"special_bonus_attack_damage_200"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	"npc_dota_hero_nevermore_ebf"
+	{
+		"override_hero"			"npc_dota_hero_nevermore"
+		
+		"Ability12"				"special_bonus_all_stats_500"
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+} 
+
+
+		

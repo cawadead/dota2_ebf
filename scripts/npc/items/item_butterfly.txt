@@ -1,0 +1,414 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: Butterfly 2
+	//=================================================================================================================
+	"item_recipe_butterfly2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_butterfly"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly2"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly;item_relic;item_orb_1"
+		}
+	}	
+	//=================================================================================================================
+	// Butterfly 2
+	//=================================================================================================================
+	"item_butterfly2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemCost"						"4175"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"butterfly/butterfly2"
+		"Model"                         "models/props_gameplay/red_box.vmdl" 
+    	"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_agility"			"85"
+			"bonus_other"			"20"
+			"bonus_damage"			"190"
+			"bonus_evasion"			"40"
+			"bonus_attack_speed"	"40"
+		}
+	    
+	    "Modifiers"
+	    {
+	        "item_butterfly_passive"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+	            
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_agility"
+	                "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_other"
+	                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_other"
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"          "%bonus_damage"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%bonus_attack_speed"
+	                "MODIFIER_PROPERTY_EVASION_CONSTANT"                "%bonus_evasion"
+	            }
+	            
+	        }
+	    }
+	}
+	//=================================================================================================================
+	// Recipe: Butterfly 3
+	//=================================================================================================================
+	"item_recipe_butterfly3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1185"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_butterfly"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly3"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly2;item_scythe_2;item_orb_2"
+		}
+	}	
+	//=================================================================================================================
+	// Butterfly 3
+	//=================================================================================================================
+	"item_butterfly3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1186"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemCost"						"12455"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"butterfly/butterfly3"
+		"Model"                         "models/props_gameplay/red_box.vmdl" 
+    	"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_agility"			"230"
+			"bonus_other"			"85"
+			"bonus_damage"			"735"
+			"bonus_evasion"			"45"
+			"bonus_attack_speed"	"50"
+		}
+	    
+	    "Modifiers"
+	    {
+	        "item_butterfly_passive"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+	            
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_agility"
+	                "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_other"
+	                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_other"
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"          "%bonus_damage"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%bonus_attack_speed"
+	                "MODIFIER_PROPERTY_EVASION_CONSTANT"                "%bonus_evasion"
+	            }
+	            
+	        }
+	    }
+	}
+	//=================================================================================================================
+	// Recipe: Butterfly 4
+	//=================================================================================================================
+	"item_recipe_butterfly4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1187"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_butterfly"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly4"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly3;item_scythe_3;item_orb_3"
+		}
+	}	
+	//=================================================================================================================
+	// Butterfly 4
+	//=================================================================================================================
+	"item_butterfly4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1188"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemCost"						"31455"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"butterfly/butterfly4"
+		"Model"                         "models/props_gameplay/red_box.vmdl" 
+    	"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_agility"			"650"
+			"bonus_other"			"325"
+			"bonus_damage"			"2500"
+			"bonus_evasion"			"50"
+			"bonus_attack_speed"	"65"
+		}
+	    
+	    "Modifiers"
+	    {
+	        "item_butterfly_passive"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+	            
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_agility"
+	                "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_other"
+	                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_other"
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"          "%bonus_damage"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%bonus_attack_speed"
+	                "MODIFIER_PROPERTY_EVASION_CONSTANT"                "%bonus_evasion"
+	            }
+	            
+	        }
+	    }
+	}
+	//=================================================================================================================
+	// Recipe: Butterfly 5
+	//=================================================================================================================
+	"item_recipe_butterfly5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_butterfly"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly5"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly4;item_scythe_4;item_orb_4"
+		}
+	}	
+	//=================================================================================================================
+	// Butterfly 5
+	//=================================================================================================================
+	"item_butterfly5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemCost"						"80000"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"butterfly/butterfly5"
+		"Model"                         "models/props_gameplay/red_box.vmdl" 
+    	"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_agility"			"2500"
+			"bonus_other"			"900"
+			"bonus_damage"			"8200"
+			"bonus_evasion"			"55"
+			"bonus_attack_speed"	"80"
+		}
+	    
+	    "Modifiers"
+	    {
+	        "item_butterfly_passive"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+	            
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_agility"
+	                "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_other"
+	                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_other"
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"          "%bonus_damage"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%bonus_attack_speed"
+	                "MODIFIER_PROPERTY_EVASION_CONSTANT"                "%bonus_evasion"
+	            }
+	            
+	        }
+	    }
+	}
+	//=================================================================================================================
+	// Recipe: Butterfly 5
+	//=================================================================================================================
+	"item_recipe_asura_rapier"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_butterfly"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_asura_rapier"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly5;item_orb_5"
+		}
+	}	
+	"item_asura_rapier"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"butterfly/asura_rapier"
+		"ItemKillable"					"1"
+		"ItemSellable"					"0"
+		"ItemDroppable"					"1"
+		"ItemCost"						"99999"
+		"ItemShopTags"					"damage;unique"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"heart"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+
+
+		"Modifiers"
+		{
+			"passive_start"
+			{	
+				"Passive" "1"
+				"IsHidden" "1"
+				"OnCreated"
+					{
+						"RunScript"
+						{
+							"ScriptFile"			"lua_item/simple_item.lua"
+							"Function"				"scale_asura"
+						}
+					}
+			}
+			"rapier_passive"
+			{	
+				"IsHidden"	 "1"
+				"Passive"	 "1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%bonus_agility"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"		"%bonus_dodge"
+				}
+			}	
+			"scale_per_round_rapier"
+			{	
+				"Passive"	 "1"
+				"Isbuff" 	"1"
+				"IsHidden"	 "1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%bonus_agility_PR"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage_PR"
+				}
+			}
+			"scale_display"
+			{	
+				"Passive"	 "1"
+				"Isbuff" 	"1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+			}
+		}
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_agility"			"7500"
+			"bonus_other"			"2150"
+			"bonus_agility_PR"		"500"
+			"bonus_dodge"			"65"
+			"bonus_damage"			"10000"
+			"bonus_damage_PR"		"1000"
+		}
+	}
+}

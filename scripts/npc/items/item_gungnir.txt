@@ -1,0 +1,338 @@
+"DOTAAbilities"
+{
+	//======================================================================================================
+	//==============Gungnir================================================================================
+	//======================================================================================================
+	"item_recipe_gungnir"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1249"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_gungnir"
+		"ItemRequirements"
+		{
+			"01"						"item_javelin;item_javelin;item_orb_2"
+		}
+	}
+	"item_gungnir"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1250"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_gungnir"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"7000"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "Pierce_percent"		"10"
+	        }
+	        "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"550"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all"				"120"
+			}
+	    }
+
+	    "Modifiers"
+	    {
+	        "Piercing"
+	        {
+	        	"IsHidden"                  "0"
+            	"Passive"                	"1"
+	        	"OnAttackLanded"
+	        	{
+	        		"RunScript"
+	        		{
+	        			"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"Pierce"
+						"damage_on_hit"		"%attack_damage"
+	        		}
+	        	}
+	        }
+	        "passive"
+	        {
+	        	"IsHidden"                  "1"
+            	"Passive"                	"1"
+            	"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	        	"Properties"
+     			{
+       				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+       				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all"
+     			}
+	    	}
+	    }
+	}
+	//======================================================================================================
+	//==============Gungnir================================================================================
+	//======================================================================================================
+	"item_recipe_gungnir_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1272"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_gungnir_2"
+		"ItemRequirements"
+		{
+			"01"						"item_gungnir;item_scythe_3;item_orb_3"
+		}
+	}
+	"item_gungnir_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1273"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_gungnir_2"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"30000"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"					"FIELD_INTEGER"
+	            "Pierce_percent"			"15"
+	        }
+	        "02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"2200"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_all"					"505"
+			}
+	    }
+
+	    "Modifiers"
+	    {
+	        "Piercing"
+	        {
+	        	"IsHidden"                  "0"
+            	"Passive"                	"1"
+	        	"OnAttackLanded"
+	        	{
+	        		"RunScript"
+	        		{
+	        			"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"Pierce"
+						"damage_on_hit"		"%attack_damage"
+	        		}
+	        	}
+	        }
+	        "passive"
+	        {
+	        	"IsHidden"                  "1"
+            	"Passive"                	"1"
+            	"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	        	"Properties"
+     			{
+       				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+       				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all"
+     			}
+	    	}
+	    }
+	}
+	
+	//======================================================================================================
+	//==============Gungnir================================================================================
+	//======================================================================================================
+	"item_gungnir_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1305"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_gungnir_3"
+		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"30000"
+		"AbilityCooldown"				"0.25"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"pierce;xbow;crossbow;fury;midas"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityValues"
+		{
+			"bonus_attack_speed"		"300"
+			"bonus_damage"				"8450"
+			"bonus_health_regen"		"610"
+			"bonus_mana_regen"			"110"
+			"radius"					"500"
+			"splash_damage"				"70"
+			"splash_damage_ranged"		"35"
+			"Pierce_percent"        	"20"
+			"bonus_all"					"855"
+		}
+		"OnEquip"
+		{
+			"RemoveModifier"
+			{
+				"ModifierName"	"Piercing"
+				"Target"	"CASTER"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"	"Piercing"
+				"Target" 
+				{
+					"Center" "CASTER"
+					"Flags" "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				}
+			}
+		}
+	
+	    "Modifiers"
+	    {
+		
+	        "Piercing"
+	        {
+	        	"IsHidden"                  "1"
+	            	"Passive"                	"1"
+	        	"OnAttackLanded"
+	        	{
+	        		"RunScript"
+	        		{
+	        			"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"Pierce_Splash"
+						"damage_on_hit"			"%attack_damage"
+	        		}
+					"FireEffect"
+					{
+						"EffectName" "particles/items_fx/battlefury_cleave.vpcf.vpcf"
+						"Target" "TARGET"
+						"EffectAttachType" "follow_origin"
+						"EffectRadius" "600"
+					}
+	        	}
+	        }
+			"passive_midas_aura3"
+			{
+				"Passive" "1"
+				"IsHidden" "1"
+				"Aura" "passive_midas_3"
+				"Aura_Radius" "9999"
+				"Aura_Teams" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" "DOTA_UNIT_TARGET_HERO"
+				
+			}
+			"passive_midas_3"
+			{
+				"IsHidden" "1"
+				"Passive"  "1"
+				"AllowIllusionDuplicate"    "0"
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"Midas3_OnHit"
+						"damage_on_hit"		"%attack_damage"
+					}
+				}
+			}
+	        "passive"
+	        {
+	        	"IsHidden"                  "1"
+	            	"Passive"                	"1"
+	            	"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	        	"Properties"
+	     			{
+	       				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	 "%bonus_damage"
+						"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+	       				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all"
+						"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all"
+						"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all"
+						"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_health_regen"
+						"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_regen"
+	     			}
+						        "States"
+			    {
+			        "MODIFIER_STATE_CANNOT_MISS" "MODIFIER_STATE_VALUE_ENABLED"
+			    }
+	    	}
+	    }
+	}
+	"item_recipe_gungnir_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1304"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_gungnir_3"
+		"ItemRequirements"
+		{
+			"01"						"item_gungnir_2;item_midas_fury;item_hyperstone_5;item_scythe_4"
+		}
+	}
+}

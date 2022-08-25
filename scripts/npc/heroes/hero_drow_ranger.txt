@@ -1,0 +1,501 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Ability: Drow Ranger	Frost Arrows
+	//=================================================================================================================
+	"drow_ranger_frost_arrows"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5019"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_DrowRanger.FrostArrows"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"625"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0 0.0 0.0 0.0"
+		"AbilityDuration"				"1.5"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0 0 0 0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"12 18 24 30 36 42 48"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"frost_arrows_movement_speed"	"-10 -25 -40 -55 -60 -65 -70"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage"						"90 180 360 850 2250 4950 9750"
+			}
+			"03"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"shard_regen_reduction_pct_per_stack"	"10"
+				"RequiresShard"							"1"
+			}
+			"04"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"shard_bonus_damage_per_stack"			"9 18 36 85 225 495 97"
+				"RequiresShard"							"1"
+			}
+			"05"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"shard_stack_duration"					"7.0"
+				"RequiresShard"							"1"
+			}
+			"06"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"shard_burst_radius"					"650"
+				"RequiresShard"							"1"
+			}
+			"06"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"shard_burst_damage_per_stack"			"300 600 1200 2400 4800 9600 19500"
+				"RequiresShard"							"1"
+			}
+			"07"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"shard_burst_move_slow_pct"					"40"
+				"RequiresShard"							"1"
+			}
+			"08"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"shard_burst_slow_duration"					"2.0"
+				"RequiresShard"							"1"
+			}
+			"09"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"shard_max_stacks"						"7"
+				"RequiresShard"							"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Ability: Drow Ranger: Multishot
+	//=================================================================================================================
+	"drow_ranger_multishot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"343"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"1.75"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"26 24 22 20 18.5 17 15.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 110 170 230 290 350 410"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"wave_count"				"3"
+				"LinkedSpecialBonus"		"special_bonus_unique_drow_ranger_8"
+			}			
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"arrow_count_per_wave"				"4"
+			}			
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"arrow_damage_pct"			"300 350 400 450 500 550 600 650"
+				"LinkedSpecialBonus"		"special_bonus_unique_drow_ranger_1"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"arrow_slow_duration"		"1.25 2 2.75 3.5 4.25 5.0 5.75"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"arrow_width"					"90"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"arrow_speed"					"1200"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"arrow_range_multiplier"	"1.75"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"arrow_angle"					"50"
+			}
+            "09"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "bypass_block"              "1"
+            }
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_3"
+	}
+	//=================================================================================================================
+	// Ability: Drow Ranger Wave of Silence
+	//=================================================================================================================
+	"drow_ranger_wave_of_silence"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5632"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_DrowRanger.Silence"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.25"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16 15 14 13 12.2 11.4 10.6"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 105 140 175 210 245 280"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"wave_speed"		"2000.0"
+				"wave_width"		
+				{
+					"value"			"250"
+					"LinkedSpecialBonus"	"special_bonus_unique_drow_ranger_4"
+				}
+				"silence_duration"			"3 4 5 6 6.5 7 7.5"
+				"knockback_distance_max"	"450"
+				"knockback_duration"		"0.6 0.65 0.7 0.75 0.8 0.85 0.9"
+				"knockback_height"		"0"
+				"wave_length"		"900"
+				"bonus_movespeed"		"10"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	//=================================================================================================================
+	// Ability: Drow Ranger's Marksmanship
+	//=================================================================================================================
+	"drow_ranger_marksmanship"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5022"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCastRange"				"400"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"MaxLevel"						"6"
+		"LevelsBetweenUpgrades"			"6"
+		
+		"HasScepterUpgrade"			"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"chance"						"20 30 40 45 50 55"
+				"LinkedSpecialBonus"			"special_bonus_unique_drow_ranger_3"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_damage"					"500 1250 3500 7500 12500 20000"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"agility_multiplier"			"30 40 50 55 60 65"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"agility_range"					"1200"
+			}	
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"split_count_scepter"			"1"
+				"RequiresScepter"				"1"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"scepter_range"					"375"
+				"RequiresScepter"				"1"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_reduction_scepter"		"0"
+				"RequiresScepter"				"1"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"disable_range"					"400"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6202"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"100"
+				"ad_linked_abilities"		"drow_ranger_multishot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6209"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"						"400"
+				"ad_linked_abilities"			"drow_ranger_frost_arrows"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6280"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"6"
+				"ad_linked_abilities"			"drow_ranger_marksmanship"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6634"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"250"
+				"ad_linked_abilities"			"drow_ranger_wave_of_silence"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"8010"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"50"
+				"ad_linked_abilities"			"drow_ranger_wave_of_silence"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"486"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"8"
+				"ad_linked_abilities"			"drow_ranger_multishot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"580"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"4"
+				"ad_linked_abilities"			"drow_ranger_wave_of_silence"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"739"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"3"
+				"ad_linked_abilities"			"drow_ranger_multishot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+}

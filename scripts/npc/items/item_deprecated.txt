@@ -1,0 +1,537 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Helm
+	//=================================================================================================================
+	"item_gauntlet_cursed"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1268"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_gauntlet_cursed"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"7000"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"cursed"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+
+
+		"Modifiers"
+		{
+			"gauntlet_cursed"
+			{	
+				"IsHidden"	 "1"
+				"Passive"	 "1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_all"
+		            "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_all"
+		            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_all"
+				}
+				"OnAttackLanded"
+				{
+   					"Random"
+					{
+   						"Chance" "%cursed_chance"
+   						"OnSuccess"
+   						{
+   							"ApplyModifier"
+							{
+								"ModifierName" 	"cursed_effect"
+								"Target" 		"TARGET"
+							}
+   						}
+   						"OnFailure"
+   						{}
+					}
+				}
+			}
+			"cursed_effect"
+			{
+				"Duration"          "%cursed_duration"
+	            "Passive"           "0"
+	            "IsHidden"          "0"
+	            "IsBuff"            "0"
+	            "IsDebuff"          "1"
+	            "IsPurgable"        "0"
+	            "Properties"
+				{
+					"MODIFIER_PROPERTY_DISABLE_HEALING" "1" 
+				}
+			}
+		}
+
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cursed_chance"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cursed_duration"			"2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"				"260"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all"				"150"
+			}
+		}
+	}
+	// Recipe: Cursed Gauntlet
+	//=================================================================================================================
+	"item_recipe_soul_gatherer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1296"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1600"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_soul_gatherer"
+		"ItemRequirements"
+		{
+			"01"						"item_gauntlet_cursed;item_orb_2;item_demonsoul"
+		}
+	}
+	
+	//=================================================================================================================
+	// Helm
+	//=================================================================================================================
+	"item_soul_gatherer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1297"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_soul_gatherer"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"25000"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"cursed"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+
+		"Modifiers"
+		{
+			"gauntlet_cursed"
+			{	
+				"IsHidden"	 "1"
+				"Passive"	 "1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_all"
+		            "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_all"
+		            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_all"
+		            "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"		"%bonus_range"
+				}
+				"OnAttackLanded"
+				{
+   					"Random"
+					{
+   						"Chance" "%cursed_chance"
+   						"OnSuccess"
+   						{
+   							"ApplyModifier"
+							{
+								"ModifierName" 	"cursed_effect"
+								"Target" 		"TARGET"
+							}
+							"RunScript"
+							{
+								"ScriptFile"			"lua_item/simple_item.lua"
+								"Function"				"add_soul_charge"
+							}
+   						}
+   						"OnFailure"
+   						{}
+					}
+				}
+			}
+			"cursed_effect"
+			{
+				"Duration"          "%cursed_duration"
+	            "Passive"           "0"
+	            "IsHidden"          "0"
+	            "IsBuff"            "0"
+	            "IsDebuff"          "1"
+	            "IsPurgable"        "0"
+	            "Properties"
+				{
+					"MODIFIER_PROPERTY_DISABLE_HEALING" "1" 
+				}
+
+			}
+			"gauntlet_bonus_soul"
+			{
+	            "Passive"           "0"
+	            "IsHidden"          "0"
+	            "IsBuff"            "1"
+	            "IsPurgable"        "0"
+	            "Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"		"%bonus_range_per_soul"
+				}
+			}
+		}
+
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cursed_chance"			"7.5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cursed_duration"			"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"				"2000"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all"				"200"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_range"				"250"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_range_per_soul"				"50"
+			}
+		}
+	}
+	"item_ancient_butterfly"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2029"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_ancient_butterfly"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"30"
+		"FightRecapLevel"				"1"
+
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4000"
+		"ItemShopTags"					"asura;hard_to_tag"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ancient"
+		"ItemPurchasable"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"150"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"25"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"25"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"flutter_speed"			"25"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"flutter_duration"		"4"
+			}
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"		"modifier_item_butterfly_flutter"
+				"Target"			"CASTER"
+			}
+			"FireEffect"
+			{
+				"EffectName"		"particles/butterfly5_active.vpcf"	
+				"EffectAttachType"  "start_at_customorigin"
+				"Target"        "CASTER"
+		        "ControlPointEntities"
+		        {
+		            "CASTER"    "follow_overhead"
+					"CASTER"    "follow_overhead"
+		        }
+			}
+			"FireSound"
+			{
+				"EffectName"	"DOTA_Item.Butterfly"
+				"Target"        "CASTER"
+			}
+		}
+		"precache"
+		{
+			"particle"				"particles/butterfly5_active.vpcf"	
+			"particle"				"particles/butterfly5_buff.vpcf"
+			"soundfile"				"sounds/items/butterfly.vsnd"
+		}
+	    "Modifiers"
+	    {
+			"modifier_item_butterfly_flutter"
+			{
+				"IsBuff"           "1"	      
+				"Duration"			"%flutter_duration"		
+				"EffectName"		"particles/butterfly5_buff.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"                "%flutter_speed"
+				}
+			}
+	        "item_butterfly_passive"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+	            
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"             "%bonus_agility"
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"          "%bonus_damage"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%bonus_attack_speed"
+	                "MODIFIER_PROPERTY_EVASION_CONSTANT"                "%bonus_evasion"
+	            }
+	            
+	        }
+	    }
+	}
+	"item_ancient_core"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2032"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_ancient_core"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"FightRecapLevel"				"1"
+
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4000"
+		"ItemShopTags"					"asura;hard_to_tag"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ancient"
+		"ItemPurchasable"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"precache"
+		{
+			"particle" "particles/items3_fx/octarine_core_lifesteal.vpcf"
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intelligence"	"150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"2500"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"2500"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"500"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"100"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_cooldown"		"30"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hero_lifesteal"		"10"
+			}				
+		}
+		"Modifiers"
+		{
+			"passive"
+			{
+				"Passive" "1"
+				"IsHidden"		"1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"  		"%bonus_health_regen"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"  		"%bonus_mana_regen"
+					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"			"%bonus_cooldown"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intelligence"
+					"MODIFIER_PROPERTY_MANA_BONUS"					"%bonus_mana"
+				}
+			}
+	    	"spell_lifesteal"
+	    	{
+	    		"IsHidden"                  "1"
+				"Passive"					"1"
+	    	}
+		}
+	}
+	"item_ancient_fury"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2033"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_ancient_fury"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"FightRecapLevel"				"1"
+
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4000"
+		"ItemShopTags"					"asura;hard_to_tag"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ancient"
+		"ItemPurchasable"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "Pierce_percent"                "10"
+	        }
+	        "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"750"
+			}
+	    }
+		"OnEquip"
+		{
+			"RemoveModifier"
+			{
+				"ModifierName"	"Piercing"
+				"Target"	"CASTER"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"	"Piercing"
+				"Target" 
+				{
+					"Center" "CASTER"
+					"Flags" "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				}
+			}
+		}
+	    "Modifiers"
+	    {
+	        "Piercing"
+	        {
+	        	"IsHidden"                  "1"
+            	"Passive"                	"1"
+	        	"OnAttackLanded"
+	        	{
+	        		"RunScript"
+	        		{
+	        			"ScriptFile"			"lua_item/simple_item.lua"
+						"Function"				"Pierce"
+						"damage_on_hit"			"%attack_damage"
+	        		}
+	        	}
+	        }
+	        "passive"
+	        {
+	        	"IsHidden"                  "1"
+            	"Passive"                	"1"
+            	"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	        	"Properties"
+     			{
+       				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+     			}
+	    	}
+	    }
+		
+	}
+}

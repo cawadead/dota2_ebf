@@ -1,0 +1,582 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: Desolator2
+	//=================================================================================================================
+	"item_recipe_desolator2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_arcane_boots"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator2"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator;item_relic"
+		}
+	}
+	
+	//=================================================================================================================
+	// Desolator
+	//=================================================================================================================
+	"item_desolator2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_desolator"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"AbilityTextureName"			"desolator/desolator2"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1220"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"desolator"
+		"ItemDeclarations"				"DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+
+
+
+		"Modifiers"
+		{
+			"desolator2_stat"
+			{
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{
+						"Target"				"TARGET"
+						"ModifierName"		"modifier_desolation2_effect"
+					}
+				}
+			}
+			"modifier_desolation2_effect"
+			{
+				"IsDebuff" "1"
+    			"IsPurgable" "0"
+    			"Duration" "%duration"
+     			"Properties"
+     			{
+       				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_reduction"
+     			}
+			}
+		}
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"185"
+			"corruption_armor"		"-9"
+			"corruption_duration"	"7.0"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Desolator3
+	//=================================================================================================================
+	"item_recipe_desolator3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_desolator"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"			"desolator/desolator3"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator3"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator2;item_scythe_2;item_crit2"
+		}
+	}
+	//=================================================================================================================
+	// Desolator
+	//=================================================================================================================
+	"item_desolator3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityTextureName"            "desolator/desolator3"
+		"ItemKillable"                  "1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"AbilityBehavior"						"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"								"item_datadriven"
+		"ItemCost"										"3135"
+		"ItemShopTags"									"damage;unique"
+		"ItemQuality"									"artifact"
+		"ItemAliases"									"desolator"
+		"ItemDisassembleRule"							"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"								"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"Modifiers"
+		{
+			"desolator3_stat"
+			{
+				"Passive"	 	"1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+				}
+				"OnAttackStart"
+				{
+					"Random"
+					{
+   						"Chance" "%critical_chance"
+   						//"PseudoRandom" WTF IS THAS SHIT ?
+   						"OnSuccess"
+   						{
+   							"ApplyModifier"
+							{
+								"ModifierName" 	"critical_strike_deso3"
+								"Target" 		"CASTER"
+							}
+   						}
+   						"OnFailure"
+   						{}
+					}
+				}
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{
+						"Target"				"TARGET"
+						"ModifierName"		"modifier_desolation3_effect"
+					}
+					
+					"RemoveModifier"
+					{
+						"ModifierName" 	"critical_strike_deso3"
+						"Target" 		"CASTER"
+					}
+				}
+			}
+			"modifier_desolation3_effect"
+			{
+				"IsDebuff" "1"
+    			"IsPurgable" "0"
+    			"Duration" "%corruption_duration"
+     			"Properties"
+     			{
+       				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%corruption_armor"
+     			}
+			}
+			"critical_strike_deso3"
+			{
+				"IsHidden"		"1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" 	"%critical_bonus"
+				}
+			}
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"760"
+			"corruption_armor"		"-12"
+			"corruption_duration"	"7.0"
+			"critical_bonus"		"300"
+			"critical_chance"		"35"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Divine desolator
+	//=================================================================================================================
+	"item_recipe_desolator4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_desolator5"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator4"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator3;item_scythe_3;item_crit3"
+		}
+	}
+
+	//=================================================================================================================
+	// divine soul
+	//=================================================================================================================
+	"item_desolator4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"desolator/desolator4"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemDroppable"					"1"
+		"ItemCost"						"60000"
+		"ItemShopTags"					"damage;unique;health;divine;T5;damage"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"soul"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"Modifiers"
+		{
+			"desolator4_stat"
+			{
+				"Passive"	 	"1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+				}
+				"OnAttackStart"
+				{
+					"Random"
+					{
+   						"Chance" "%critical_chance"
+   						//"PseudoRandom" WTF IS THAS SHIT ?
+   						"OnSuccess"
+   						{
+   							"ApplyModifier"
+							{
+								"ModifierName" 	"critical_strike_deso4"
+								"Target" 		"CASTER"
+							}
+   						}
+   						"OnFailure"
+   						{}
+					}
+				}
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{
+						"Target"				"TARGET"
+						"ModifierName"		"modifier_desolation4_effect"
+					}
+					"RemoveModifier"
+					{
+						"ModifierName" 	"critical_strike_deso4"
+						"Target" 		"CASTER"
+					}
+				}
+			}
+			"modifier_desolation4_effect"
+			{
+				"IsDebuff" "1"
+    			"IsPurgable" "0"
+    			"Duration" "%corruption_duration"
+     			"Properties"
+     			{
+       				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%corruption_armor"
+     			}
+			}
+			"critical_strike_deso4"
+			{
+				"IsHidden"		"1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" 	"%critical_bonus"
+				}
+			}
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"2550"
+			"corruption_armor"		"-21"
+			"corruption_duration"	"7.0"
+			"critical_bonus"		"350"
+			"critical_chance"		"40"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Divine desolator
+	//=================================================================================================================
+	"item_recipe_desolator5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_desolator5"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator5"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator4;item_scythe_4"
+		}
+	}
+
+	//=================================================================================================================
+	// divine soul
+	//=================================================================================================================
+	"item_desolator5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"desolator/desolator5"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemDroppable"					"1"
+		"ItemCost"						"140000"
+		"ItemShopTags"					"damage;unique;health;bahamut;T6;damage"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"soul"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityCastPoint"	"0.0"
+		"AbilityCastPoint"	"1500.0"
+		"AbilityCooldown"	"0"
+		"AbilityManaCost"	"0"
+
+		"Modifiers"
+		{
+			"desolator4_stat"
+			{
+				"Passive"	 	"1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+				}
+				"OnAttackStart"
+				{
+					"Random"
+					{
+   						"Chance" "%critical_chance"
+   						//"PseudoRandom" WTF IS THAS SHIT ?
+   						"OnSuccess"
+   						{
+   							"ApplyModifier"
+							{
+								"ModifierName" 	"critical_strike_deso5"
+								"Target" 		"CASTER"
+							}
+   						}
+   						"OnFailure"
+   						{}
+					}
+				}
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{
+						"Target"				"TARGET"
+						"ModifierName"		"modifier_desolation5_effect"
+					}
+					"RemoveModifier"
+					{
+						"ModifierName" 	"critical_strike_deso5"
+						"Target" 		"CASTER"
+					}
+				}
+			}
+			"modifier_desolation5_effect"
+			{
+				"IsDebuff" "1"
+    			"IsPurgable" "0"
+    			"Duration" "%corruption_duration"
+     			"Properties"
+     			{
+       				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%corruption_armor"
+     			}
+			}
+			"critical_strike_deso5"
+			{
+				"IsHidden"		"1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" 	"%critical_bonus"
+				}
+			}
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"9900"
+			"corruption_armor"		"-80"
+			"corruption_duration"	"7.0"
+			"critical_bonus"		"400"
+			"critical_chance"		"50"
+		}
+	}
+        //=================================================================================================================
+	// Recipe: Divine desolator
+	//=================================================================================================================
+	"item_recipe_desolator6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_desolator6"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator6"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator5;item_desolator5;item_desolator4"
+		}
+	}
+
+	//=================================================================================================================
+	// divine soul
+	//=================================================================================================================
+	"item_desolator6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"desolator/desolator6"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemDroppable"					"1"
+		"ItemCost"						"140000"
+		"ItemShopTags"					"damage;unique;health;bahamut;T6;damage"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"soul"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityCastPoint"	"0.0"
+		"AbilityCastPoint"	"1500.0"
+		"AbilityCooldown"	"0"
+		"AbilityManaCost"	"0"
+
+		"Modifiers"
+		{
+			"desolator4_stat"
+			{
+				"Passive"	 	"1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+				}
+				"OnAttackStart"
+				{
+					"Random"
+					{
+   						"Chance" "%critical_chance"
+   						//"PseudoRandom" WTF IS THAS SHIT ?
+   						"OnSuccess"
+   						{
+   							"ApplyModifier"
+							{
+								"ModifierName" 	"critical_strike_deso6"
+								"Target" 		"CASTER"
+							}
+   						}
+   						"OnFailure"
+   						{}
+					}
+				}
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{
+						"Target"				"TARGET"
+						"ModifierName"		"modifier_desolation6_effect"
+					}
+					"RemoveModifier"
+					{
+						"ModifierName" 	"critical_strike_deso6"
+						"Target" 		"CASTER"
+					}
+				}
+			}
+			"modifier_desolation6_effect"
+			{
+				"IsDebuff" "1"
+    			"IsPurgable" "0"
+    			"Duration" "%corruption_duration"
+     			"Properties"
+     			{
+       				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%corruption_armor"
+     			}
+			}
+			"critical_strike_deso6"
+			{
+				"IsHidden"		"1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" 	"%critical_bonus"
+				}
+			}
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"12950"
+			"corruption_armor"		"-150"
+			"corruption_duration"	"7.0"
+			"critical_bonus"		"500"
+			"critical_chance"		"50"
+		}
+	}
+}

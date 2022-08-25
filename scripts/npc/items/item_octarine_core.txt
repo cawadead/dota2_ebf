@@ -1,0 +1,283 @@
+"DOTAAbilities"
+{
+	"item_recipe_octarine_core2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_octarine_core"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_octarine_core2"
+		"ItemRequirements"
+		{
+			"01"						"item_octarine_core;item_orb_1"
+		}
+	}
+	"item_octarine_core2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_octarine_core.lua"
+		"AbilityTextureName"			"octarine_core/octarine_core_2"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"24620"
+		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
+		"ItemQuality"					"rare"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemAliases"					"mana;mb;octarine core"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		
+		"precache"
+		{
+			"particle" "particles/items3_fx/octarine_core_lifesteal.vpcf"
+		}
+		"AbilityValues"
+		{
+			"bonus_cooldown"		"30"
+			"bonus_all"				"30"
+			"cast_range_bonus"		"250"
+			"bonus_health"			"1700"
+			"bonus_mana"			"1450"
+			"bonus_mana_regen"		"9"
+		}
+	}
+	"item_recipe_octarine_core3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_octarine_core"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_octarine_core3"
+		"ItemRequirements"
+		{
+			"01"						"item_octarine_core2;item_orb_2"
+		}
+	}
+	"item_octarine_core3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_octarine_core.lua"
+		"AbilityTextureName"			"octarine_core/octarine_core_3"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"24620"
+		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
+		"ItemQuality"					"rare"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemAliases"					"mana;mb;octarine core"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		
+		"precache"
+		{
+			"particle" "particles/items3_fx/octarine_core_lifesteal.vpcf"
+		}
+		"AbilityValues"
+		{
+			"bonus_cooldown"		"35"
+			"bonus_all"				"120"
+			"cast_range_bonus"		"275"
+			"bonus_health"			"6800"
+			"bonus_mana"			"2900"
+			"bonus_mana_regen"		"27"
+		}
+	}
+	"item_recipe_octarine_core4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_octarine_core"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_octarine_core4"
+		"ItemRequirements"
+		{
+			"01"						"item_octarine_core3;item_orb_3"
+		}
+	}
+	"item_octarine_core4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_octarine_core.lua"
+		"AbilityTextureName"			"octarine_core/octarine_core_4"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"24620"
+		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
+		"ItemQuality"					"rare"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemAliases"					"mana;mb;octarine core"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		
+		"precache"
+		{
+			"particle" "particles/items3_fx/octarine_core_lifesteal.vpcf"
+		}
+		"AbilityValues"
+		{
+			"bonus_cooldown"		"40"
+			"bonus_all"				"400"
+			"cast_range_bonus"		"300"
+			"bonus_health"			"27500"
+			"bonus_mana"			"5800"
+			"bonus_mana_regen"		"81"
+		}
+	}
+	"item_recipe_octarine_core5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_octarine_core"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_octarine_core5"
+		"ItemRequirements"
+		{
+			"01"						"item_octarine_core4;item_orb_4"
+		}
+	}
+	//=================================================================================================================
+	// Octarine Core 5
+	//=================================================================================================================
+	"item_octarine_core5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_octarine_core.lua"
+		"AbilityTextureName"			"octarine_core/octarine_core_5"
+		
+	    "AbilityCooldown"               "195.0"
+	    "AbilityManaCost"               "3000"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"72386"
+		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
+		"ItemQuality"					"rare"
+		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
+		"ItemAliases"					"mana;mb;octarine core"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		
+		"precache"
+		{
+			"particle" "particles/items3_fx/octarine_core_lifesteal.vpcf"
+		}
+		
+		"AbilityValues"
+		{
+			"bonus_cooldown"		"45"
+			"bonus_all"				"1500"
+			"cast_range_bonus"		"325"
+			"bonus_health"			"110000"
+			"bonus_mana"			"12000"
+			"bonus_mana_regen"		"245.0"
+		}
+	}
+	"item_recipe_asura_core"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_octarine_core"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_asura_core"
+		"ItemRequirements"
+		{
+			"01"						"item_octarine_core5;item_orb_5"
+		}
+	}
+	//=================================================================================================================
+	// Octarine Core 5
+	//=================================================================================================================
+	"item_asura_core"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_octarine_core.lua"
+		"AbilityTextureName"			"octarine_core/asura_core"
+		
+	    "AbilityCooldown"               "195.0"
+	    "AbilityManaCost"               "3000"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"72386"
+		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
+		"ItemQuality"					"rare"
+		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
+		"ItemAliases"					"mana;mb;octarine core"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		
+		"precache"
+		{
+			"particle" "particles/items3_fx/octarine_core_lifesteal.vpcf"
+		}
+		
+		"AbilityValues"
+		{
+			"bonus_cooldown"		"66"
+			"bonus_all"				"4000"
+			"bonus_all_pr"			"250"
+			"cast_range_bonus"		"325"
+			"bonus_health"			"200000"
+			"bonus_mana"			"24000"
+			"bonus_mana_regen"		"500.0"
+		}
+	}
+}

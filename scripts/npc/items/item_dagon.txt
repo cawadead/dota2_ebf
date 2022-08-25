@@ -1,0 +1,533 @@
+"DOTAAbilities"
+{
+	"item_magic_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1207"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_magic_ring"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"600"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"basic"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+    		"modifier_item_magic_ring"
+    		{
+		        "Passive" "1"  
+		        "IsHidden" "1"  
+		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+		            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+		        }
+		    }
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_mana_regen"					"2"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_int"							"20"
+			}
+		}
+	}
+	"item_recipe_mystic_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1208"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_mystic_ring"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"950"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mystic_ring"
+		"ItemRequirements"
+		{
+			"01"						"item_magic_ring;item_orb_1"
+		}
+	}
+	"item_mystic_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1209"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_mystic_ring"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"2000"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"magic"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+    		"modifier_item_mystic_ring"
+    		{
+		        "Passive" "1"  
+		        "IsHidden" "1"  
+		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+		            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+		        }
+		    }
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_mana_regen"					"6"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_int"							"65"
+			}
+		}
+	}
+	"item_recipe_overlord_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1210"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_overlord_ring"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1450"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_overlord_ring"
+		"ItemRequirements"
+		{
+			"01"						"item_mystic_ring;item_orb_2"
+		}
+	}
+	"item_overlord_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1211"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_overlord_ring"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"10000"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+    		"modifier_item_overlord_ring"
+    		{
+		        "Passive" "1"  
+		        "IsHidden" "1"  
+		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+		            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+		        }
+		    }
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_mana_regen"					"18"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_int"							"205"
+			}
+		}
+	}
+
+	"item_recipe_divine_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1212"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_arcane_boots"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_divine_ring"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2350"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_divine_ring"
+		"ItemRequirements"
+		{
+			"01"						"item_overlord_ring;item_orb_3"
+		}
+	}
+	"item_divine_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1213"				// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_divine_ring"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"35000"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ring"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+    		"modifier_item_divine_ring"
+    		{
+		        "Passive" "1"  
+		        "IsHidden" "1"  
+		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+		            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+		        }
+		    }
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_mana_regen"					"55"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_int"							"615"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Dagon
+	//=================================================================================================================
+	"item_recipe_Dagon_Mystic"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_dagon"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_Dagon_Mystic"
+		"ItemRequirements"
+		{
+			"01"						"item_dagon_5;item_divine_ring;item_orb_4"
+		}
+	}	
+	//=================================================================================================================
+	// Butterfly 5
+	//=================================================================================================================
+	"item_Dagon_Mystic"
+	{
+		// General
+	    //-------------------------------------------------------------------------------------------------------------
+	    "BaseClass"                     "item_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_ALL"
+	    "Model"                         "models/props_gameplay/red_box.vmdl" 
+	    "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+	    "AbilityTextureName"            "item_dagon_mystic"
+	    "FightRecapLevel"               "1"
+	    
+	    // Stats        
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "1200"
+	    "AbilityCastPoint"              "0.0"
+	    "AbilityCooldown"               "30"
+	    "AbilityManaCost"               "1000"
+
+	    "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	    
+	    // Item Info
+	    //-------------------------------------------------------------------------------------------------------------
+	    "ItemCost"                      "40000"
+	    "ItemShopTags"                  "damage;int;str;agi;hard_to_tag"
+	    "ItemQuality"                   "rare"  
+	    "ItemAliases"                   "dagon"
+	    "precache"
+			{
+				"particle"				"particles/dagon_mystic.vpcf"
+			}
+	    
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_intellect"       "2500"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bonus_mana_regen"      "165"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "damage_base"			"205000"
+	        }
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "damage_per_int"		"20"
+	        }
+	       
+	    }
+	    
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	        	"ScriptFile"			"lua_item/simple_item.lua"
+	            "Function"          "item_dagon_datadriven_on_spell_start"
+	        }
+	    }
+	    
+	    "Modifiers"
+	    {
+	        "modifier_item_dagon_datadriven"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	            "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+	            
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%bonus_intellect"
+	                "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"		"%bonus_mana_regen"
+	            }
+	        }
+	    }
+	}
+	//=================================================================================================================
+	// Recipe: Dagon
+	//=================================================================================================================
+	"item_recipe_asura_staff"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_dagon"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_asura_staff"
+		"ItemRequirements"
+		{
+			"01"						"item_Dagon_Mystic;item_orb_5"
+		}
+	}	
+	"item_asura_staff"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_ALL"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_asura_staff"
+		"ItemKillable"					"1"
+		"ItemSellable"					"0"
+		"ItemDroppable"					"1"
+		"ItemCost"						"99999"
+		"ItemShopTags"					"damage;unique"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"dagon"
+
+	    // Stats        
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "950"
+	    "AbilityCastPoint"              "0.0"
+	    "AbilityCooldown"               "50"
+	    "AbilityManaCost"               "2000"
+
+	    "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "precache"
+			{
+				"particle"				"particles/dagon_mystic.vpcf"
+			}
+		
+
+
+		"Modifiers"
+		{
+			"passive_start"
+			{	
+				"Passive" "1"
+				"IsHidden" "1"
+				"OnCreated"
+					{
+						"RunScript"
+						{
+							"ScriptFile"			"lua_item/simple_item.lua"
+							"Function"				"scale_asura"
+						}
+					}
+			}
+			"staff_passive"
+			{	
+				"IsHidden"	 "1"
+				"Passive"	 "1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_int"
+				}
+			}	
+			"scale_per_round_staff"
+			{	
+				"Passive"	 "1"
+				"Isbuff" 	"1"
+				"IsHidden"	 "1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_int_PR"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage_PR"
+				}
+			}
+			"scale_display"
+			{	
+				"Passive"	 "1"
+				"Isbuff" 	"1"
+				"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+			}
+		}
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_int"			"9500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_int_PR"			"950"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"8000"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage_PR"			"950"
+			}
+			 "05"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "damage_base"                "50000"
+	        }
+	        "06"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "damage_per_int"                "20"
+	        }
+	        "07"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "range_tooltip"         "1200"
+	        }
+	       
+	    }
+	    
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	        	"ScriptFile"			"lua_item/simple_item.lua"
+	            "Function"          "item_dagon_datadriven_on_spell_start"
+	        }
+	    }
+	}
+}
