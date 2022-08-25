@@ -159,100 +159,38 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"projectile_count"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_count"		"8"
-				"LinkedSpecialBonus"	"special_bonus_unique_snapfire_1"
+				"value"		"8"
+				"special_bonus_unique_snapfire_1"	"+6"
 			}
-			"02"
+			"projectile_speed"		"1300"
+			"projectile_width"		"130"
+			"impact_radius"			"275"
+			"damage_per_impact"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_speed"		"1300"
+				"value"		"1600 15000 74500 235000 430000 640000"
+				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"		"+120000"
 			}
-			"03"
+			"duration_tooltip"		"5.5"
+			"projectile_vision"		"500"
+			"turn_rate"				"75"
+			"burn_interval"			"0.5"
+			"burn_damage"			"1000 15450 48000 115500 220000 365000"
+			"move_slow_pct"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_width"		"130"
+				"value"			"15 17 19 20 22 25"
+				"special_bonus_unique_snapfire_4"	"+20"
 			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"impact_radius"			"275"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_per_impact"		"1600 15000 74500 235000 430000 640000"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration_tooltip"		"5.5"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_vision"		"500"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"turn_rate"				"75"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_interval"			"0.5"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"burn_damage"			"600 5450 28000 85500 180000 285000 365000"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"move_slow_pct"			"15 17 19 20 22 25"
-				"LinkedSpecialBonus"	"special_bonus_unique_snapfire_4"
-			}
-			"12"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_ground_duration"	"3.0"
-			}
-			"13"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"dist_change_speed"		"75"
-			}
-			"14"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"min_range"				"600"
-			}
-			"15"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"min_lob_travel_time"	"0.8"
-			}
-			"16"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"max_lob_travel_time"	"2.0"
-			}
-			"17"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"delay_after_last_projectile"	"0.5"
-			}
-			"18"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_linger_duration"	"1.0"
-			}
+			"burn_ground_duration"	"3.0"
+			"dist_change_speed"		"75"
+			"min_range"				"600"
+			"min_lob_travel_time"	"0.8"
+			"max_lob_travel_time"	"2.0"
+			"delay_after_last_projectile"	"0.5"
+			"burn_linger_duration"	"1.0"
 		}
 	}
 
@@ -337,94 +275,28 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"projectile_speed"		"1400"
+			"projectile_width"		"130"
+			"impact_radius"			"400"
+			"projectile_vision"		"500"
+			"burn_interval"			"0.5"
+			"burn_damage"			"4000"
+			"move_slow_pct"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_speed"		"1400"
+				"value"			"25"
+				"special_bonus_unique_snapfire_4"	"+20"
 			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_width"		"130"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"impact_radius"			"400"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_vision"		"500"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_interval"			"0.5"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"burn_damage"			"1000 2000 4000 8000 16000 32000 64000"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"move_slow_pct"			"25"
-				"LinkedSpecialBonus"	"special_bonus_unique_snapfire_4"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_ground_duration"	"3.0"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"min_range"				"0" //"600"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"min_lob_travel_time"	"0.1"
-			}
-			"12"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"max_lob_travel_time"	"2.0"
-			}
-			"13"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_linger_duration"	"1.0"
-			}
-			"14"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.5"
-			}
-			"15"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"min_height_above_lowest"	"150.0"
-			}
-			"16"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"min_height_above_highest"	"100.0"
-			}
-			"17"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"min_acceleration"		"1000.0"
-			}
-			"18"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"max_acceleration"		"2000.0"
-			}
+			"burn_ground_duration"	"3.0"
+			"min_lob_travel_time"	"0.1"
+			"max_lob_travel_time"	"2.0"
+			"burn_linger_duration"	"1.0"
+			"stun_duration"			"1.5"
+			"min_height_above_lowest"	"150.0"
+			"min_height_above_highest"	"100.0"
+			"min_acceleration"		"1000.0"
+			"max_acceleration"		"2000.0"
 		}
 	}
 
@@ -452,10 +324,6 @@
 		"AbilityCastPoint"				"0.2"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 
-		// Time
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"21 20 19 18 17 16 15"
-
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"100 150 200 250 300 350 400"
@@ -464,26 +332,39 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"projectile_speed"		"1000"
+				"AbilityCooldown"				
+				{
+					"value"		"21 20 19 18 17 16 15"
+					"special_bonus_unique_snapfire_3"	"-4"
+				}
+
+				"projectile_speed"		"1100"
 				"pre_hop_duration"		"0.0"
-				"jump_duration"			"0.484" //"0.431 0.484 0.538 0.592" // proportional to horizontal distance
-				"jump_height"			"257" //"228 257 285 314" // proportional to horizontal distance
-				"jump_horizontal_distance"	"425" //"400 450 500 550"
+				"jump_duration"			
+				{
+					"value"	"0.484" //"0.431 0.484 0.538 0.592" // proportional to horizontal distance
+					"special_bonus_shard"	"+0.2"
+				}
+				"jump_height"			
+				{
+					"value"						"257" //"228 257 285 314" // proportional to horizontal distance
+					"special_bonus_shard"		"+105"
+				}
+				"jump_horizontal_distance"	
+				{
+					"value"						"425" //"400 450 500 550"
+					"special_bonus_shard"		"+175"
+				}
 				"pre_land_anim_time"	"0.14"
 				"landing_gesture_duration"	"0.6"
 				"impact_radius"			"300"
 				"impact_damage"			"700 1700 4050 9700 23500 56000 135000"
-				"impact_stun_duration"	
-				{
-					"value"		"1.3 1.4 1.6 1.7 1.9 2.0 2.2"
-					"special_bonus_unique_snapfire_3"	"+0.3"
-
-				}
+				"impact_stun_duration"	"1.3 1.4 1.6 1.7 1.9 2.0 2.2"
 				"self_cast_delay"		"0.3"
 				"target_heal"			
 				{
 					"value"			"0"
-					"special_bonus_unique_snapfire_5"	"+625"
+					"special_bonus_unique_snapfire_5"	"+1025"
 				}
 		}
 	}
@@ -547,16 +428,7 @@
 		"ID"						"6485"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"value"				"6"
-				"ad_linked_abilities"			"snapfire_mortimer_kisses"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
+		"BaseClass"							"special_bonus_base"
 	}
 
  	//=================================================================================================================
@@ -605,16 +477,7 @@
 		"ID"						"6490"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"value"				"20" // Lizard Blobs Movement Slow
-				"ad_linked_abilities"			"snapfire_mortimer_kisses"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
+		"BaseClass"					"special_bonus_base"
 	}
 
  	//=================================================================================================================
@@ -669,7 +532,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"value"				"40500"
+				"value"				"60"
 				"ad_linked_abilities"			"snapfire_scatterblast"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -695,5 +558,14 @@
 				"ad_linked_abilities"			"snapfire_lil_shredder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
+	}
+	"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"989"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
 	}
 }

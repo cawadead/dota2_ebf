@@ -27,7 +27,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"15 14 13 12"
+		"AbilityCooldown"				"15 14 13 12 11 10 9"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -37,38 +37,24 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"burrow_width"		"150"
+			"burrow_duration"	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"burrow_width"		"150"
+				"value"			"1.6 1.7 1.8 1.9 2.0 2.1 2.2"
+				"special_bonus_unique_sand_king_burrowstrike_stun"				"+0.3"
 			}
-			"02"
+			"burrow_speed"		"2000"
+			"burrow_anim_time"	"0.52"
+			"cast_range_scepter"
 			{
-				"var_type"			"FIELD_FLOAT"
-				"burrow_duration"	"1.6 1.7 1.8 1.9 2.0 2.1 2.2"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"burrow_speed"		"2000"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"burrow_anim_time"	"0.52"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"cast_range_scepter"		"1300"
+				"value"						"1300"
 				"RequiresScepter"			"1"
 			}
-			"06"
+			"burrow_speed_scepter"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"burrow_speed_scepter"		"3000"
+				"value"		"3000"
 				"RequiresScepter"			"1"
 			}
 		}
@@ -236,7 +222,7 @@
 			
 			"epicenter_pulses"	
 			{
-				"value"					"6 7 8 9 10"
+				"value"					"5 6 7 8 9 10"
 				"LinkedSpecialBonus"	"special_bonus_unique_sand_king"
 			}
 			"epicenter_damage"	"1100 10000 50500 155000 285000 415000"
@@ -457,4 +443,13 @@
 			}
 		}
 	}
+	"special_bonus_unique_sand_king_burrowstrike_stun"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"1066"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}	
 }

@@ -433,24 +433,40 @@
 	"npc_dota_hero_lifestealer_ebf"
 	{
 		"override_hero"			"npc_dota_hero_life_stealer"
-		
-		"Ability10"				"special_bonus_attack_speed_30"
-		"Ability12"				"special_bonus_attack_damage_250"
-		"Ability13"				"special_bonus_hp_6500"
+		"Ability1"		"life_stealer_rage"
+		"Ability2"		"life_stealer_feast"
+		"Ability3"		"life_stealer_ghoul_frenzy"
+		"Ability4"		"life_stealer_open_wounds"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"life_stealer_infest"
+		"Ability7"		"life_stealer_consume"
+		"Ability10"		"special_bonus_unique_lifestealer_infest_damage"
+		"Ability11"		"special_bonus_unique_lifestealer_2"
+		"Ability12"		"special_bonus_attack_damage_250"
+		"Ability13"		"special_bonus_hp_6500"
+		"Ability14"		"special_bonus_unique_lifestealer_infest_target_bonus"
+		"Ability15"		"special_bonus_unique_lifestealer_6"
+		"Ability16"		"special_bonus_unique_lifestealer_3"
+		"Ability17"		"special_bonus_unique_lifestealer"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 	"npc_dota_hero_lycan_ebf"
 	{
 		"override_hero"			"npc_dota_hero_lycan"
-		
-		"Ability10"				"special_bonus_unique_lycan_6"
-		"Ability11"				"special_bonus_unique_lycan_3"
-		"Ability12"				"special_bonus_unique_lycan_7"
-		"Ability13"				"special_bonus_unique_lycan_8"
-		"Ability14"				"special_bonus_unique_lycan_1"
-		"Ability15"				"special_bonus_unique_lycan_4"
-		"Ability17"				"special_bonus_unique_lycan_2"
-		"Ability16"				"special_bonus_unique_lycan_5"
+		"Ability1"		"lycan_summon_wolves"
+		"Ability2"		"lycan_howl"
+		"Ability3"		"lycan_feral_impulse"
+		"Ability4"		"lycan_wolf_bite"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"lycan_shapeshift"
+		"Ability10"		"special_bonus_unique_lycan_6"
+		"Ability11"		"special_bonus_unique_lycan_3"
+		"Ability12"		"special_bonus_unique_lycan_7"
+		"Ability13"		"special_bonus_unique_lycan_8"
+		"Ability14"		"special_bonus_unique_lycan_1"
+		"Ability15"		"special_bonus_unique_lycan_4"
+		"Ability17"		"special_bonus_unique_lycan_2"
+		"Ability16"		"special_bonus_unique_lycan_5"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 	"npc_dota_hero_wisp_ebf"
@@ -560,7 +576,26 @@
 		
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
-
+	"npc_dota_hero_snapfire_ebf"
+	{
+		"override_hero"			"npc_dota_hero_snapfire"
+		
+		"Ability1"				"snapfire_scatterblast"
+		"Ability2"				"snapfire_firesnap_cookie"
+		"Ability3"				"snapfire_lil_shredder"
+		"Ability4"				"snapfire_gobble_up"
+		"Ability5"				"snapfire_spit_creep"
+		"Ability6"				"snapfire_mortimer_kisses"
+		"Ability10"				"special_bonus_unique_snapfire_7"
+		"Ability11"				"special_bonus_unique_snapfire_5"
+		"Ability12"				"special_bonus_unique_snapfire_2"
+		"Ability13"				"special_bonus_unique_snapfire_3"
+		"Ability14"				"special_bonus_unique_snapfire_6"
+		"Ability15"				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"
+		"Ability16"				"special_bonus_unique_snapfire_8"
+		"Ability17"				"special_bonus_unique_snapfire_1"
+		//"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
 	"npc_dota_hero_omniknight_ebf"
 	{
 		"override_hero"			"npc_dota_hero_omniknight"
@@ -849,6 +884,21 @@
 	"npc_dota_hero_sven_ebf"
 	{
 		"override_hero"			"npc_dota_hero_sven"
+
+		"Ability1"		"sven_storm_bolt"
+		"Ability2"		"sven_great_cleave"
+		"Ability3"		"sven_warcry"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"sven_gods_strength"
+		"Ability10"		"special_bonus_unique_sven_5"
+		"Ability11"		"special_bonus_attack_speed_90"
+		"Ability12"		"special_bonus_unique_sven_3"
+		"Ability13"		"special_bonus_unique_sven_8"
+		"Ability14"		"special_bonus_unique_sven_6"
+		"Ability15"		"special_bonus_unique_sven_7"
+		"Ability16"		"special_bonus_unique_sven_2"
+		"Ability17"		"special_bonus_unique_sven_4"
 	}
 	"npc_dota_hero_treant_ebf"
 	{
@@ -966,6 +1016,23 @@
 		"Ability16"		"special_bonus_unique_clockwerk_6"
 		"Ability17"		"special_bonus_unique_clockwerk"
 	}
+	"npc_dota_hero_sand_king_ebf"{
+		"override_hero"		"npc_dota_hero_sand_king"
+		"Ability1"		"sandking_burrowstrike"
+		"Ability2"		"sandking_sand_storm"
+		"Ability3"		"sandking_caustic_finale"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"sandking_epicenter"
+		"Ability10"		"special_bonus_unique_sand_king_2"
+		"Ability11"		"special_bonus_unique_sand_king_burrowstrike_stun"
+		"Ability12"		"special_bonus_unique_sand_king_3"
+		"Ability13"		"special_bonus_unique_sand_king_8"
+		"Ability14"		"special_bonus_unique_sand_king_7"
+		"Ability15"		"special_bonus_unique_sand_king_5"
+		"Ability16"		"special_bonus_unique_sand_king"
+		"Ability17"		"special_bonus_unique_sand_king_4"
+	}
 	"npc_dota_hero_furion_ebf"
 	{
 		"override_hero"		"npc_dota_hero_furion"
@@ -977,12 +1044,38 @@
 	"npc_dota_hero_night_stalker_ebf"
 	{
 		"override_hero"		"npc_dota_hero_night_stalker"
+		"Ability1"		"night_stalker_void"
+		"Ability2"		"night_stalker_crippling_fear"
+		"Ability3"		"night_stalker_hunter_in_the_night"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"night_stalker_darkness"
+		"Ability10"		"special_bonus_unique_night_stalker_4"
+		"Ability11"		"special_bonus_unique_night_stalker_7"
+		"Ability12"		"special_bonus_unique_night_stalker_3"
+		"Ability13"		"special_bonus_unique_night_stalker_hunter_status_resist"
+		"Ability14"		"special_bonus_unique_night_stalker_6"
 		"Ability15"		"special_bonus_strength_800"
+		"Ability16"		"special_bonus_unique_night_stalker_2"
+		"Ability17"		"special_bonus_unique_night_stalker"
 	}
 	"npc_dota_hero_slardar_ebf"
 	{
 		"override_hero"		"npc_dota_hero_slardar"
+		"Ability1"		"slardar_sprint"
+		"Ability2"		"slardar_slithereen_crush"
+		"Ability3"		"slardar_bash"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"slardar_amplify_damage"
+		"Ability10"		"special_bonus_unique_slardar_7"
+		"Ability11"		"special_bonus_unique_slardar_slithereen_crush_stun"
 		"Ability12"		"special_bonus_hp_6500"
+		"Ability13"		"special_bonus_unique_slardar_2"
+		"Ability14"		"special_bonus_unique_slardar"
+		"Ability15"		"special_bonus_unique_slardar_5"
+		"Ability16"		"special_bonus_unique_slardar_4"
+		"Ability17"		"special_bonus_unique_slardar_3"
 	}
 	"npc_dota_hero_abadon_ebf"
 	{	
