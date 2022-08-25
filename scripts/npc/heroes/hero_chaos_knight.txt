@@ -24,7 +24,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"500"
-		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+		"AbilityCastPoint"				"0.4"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -174,7 +174,7 @@
 						"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_5"
 				}
 				"crit_min"							"120"
-				"crit_max"							"140 175 210 245 255 265 275"
+				"crit_max"							"340 375 410 445 455 465 475"
 				"lifesteal"					
 				{
 					"value"							"20 30 40 50 55 60 65"
@@ -212,7 +212,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.4 0.4 0.4"
+		"AbilityCastPoint"				"0.4"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		// Time		
@@ -321,7 +321,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"200"
+				"value"				"225"
 				"ad_linked_abilities"			"chaos_knight_reality_rift"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -393,8 +393,8 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"						"10"
-				"ad_linked_abilities"		"chaos_knight_chaos_strike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value"				"10"
+				"ad_linked_abilities"			"chaos_knight_chaos_strike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -418,7 +418,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"20"
+				"value"				"22"
 				"ad_linked_abilities"			"chaos_knight_chaos_strike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -443,7 +443,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"-40"
+				"value"				"-75"
 				"ad_linked_abilities"			"chaos_knight_phantasm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}

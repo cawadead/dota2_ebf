@@ -58,12 +58,12 @@
 		"Ability4"		"brewmaster_primal_companion"
 		"Ability5"		"generic_hidden"
 		"Ability6"		"brewmaster_primal_split"
-		"Ability10"					"special_bonus_hp_regen_100"
-		"Ability11"					"special_bonus_attack_damage_250"
+		"Ability10"		"special_bonus_hp_regen_100"
+		"Ability11"		"special_bonus_attack_damage_250"
 		"Ability12"		"special_bonus_unique_brewmaster_5"
-		"Ability13"					"special_bonus_hp_7000"
+		"Ability13"		"special_bonus_hp_7000"
 		"Ability14"		"special_bonus_unique_brewmaster"
-		"Ability15"					"special_bonus_attack_speed_160"
+		"Ability15"		"special_bonus_attack_speed_160"
 		"Ability16"		"special_bonus_unique_brewmaster_6"
 		"Ability17"		"special_bonus_unique_brewmaster_4"
 		
@@ -75,13 +75,21 @@
 	"npc_dota_hero_bristleback_ebf"
 	{
 		"override_hero"			"npc_dota_hero_bristleback"
-		
-		"Ability10"				"special_bonus_attack_damage_250"
-		"Ability11"				"special_bonus_mp_regen_8"
-		"Ability12"				"special_bonus_hp_4000"
-		"Ability13"				"special_bonus_attack_speed_30"
-		"Ability14"				"special_bonus_hp_regen_4000"
-		"Ability16"				"special_bonus_spell_lifesteal_12"
+
+		"Ability1"		"bristleback_viscous_nasal_goo"
+		"Ability2"		"bristleback_quill_spray"
+		"Ability3"		"bristleback_bristleback"
+		"Ability4"		"bristleback_hairball"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"bristleback_warpath"
+		"Ability10"		"special_bonus_attack_damage_250"
+		"Ability11"		"special_bonus_mp_regen_40"
+		"Ability12"		"special_bonus_hp_4000"
+		"Ability13"		"special_bonus_attack_speed_30"
+		"Ability14"		"special_bonus_hp_regen_4000"
+		"Ability15"		"special_bonus_unique_bristleback_2"
+		"Ability16"		"special_bonus_spell_lifesteal_12"
+		"Ability17"		"special_bonus_unique_bristleback_3"
 		
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -405,8 +413,21 @@
 	{
 		"override_hero"			"npc_dota_hero_kunkka"
 		
-		"Ability10"				"special_bonus_attack_damage_150"
-		
+		"Ability1"		"kunkka_torrent"
+		"Ability2"		"kunkka_tidebringer"
+		"Ability3"		"kunkka_x_marks_the_spot"
+		"Ability4"		"kunkka_torrent_storm"
+		"Ability5"		"kunkka_tidal_wave"
+		"Ability6"		"kunkka_ghostship"
+		"Ability7"		"kunkka_return"
+		"Ability10"		"special_bonus_attack_damage_150"
+		"Ability11"		"special_bonus_unique_kunkka_6"
+		"Ability12"		"special_bonus_unique_kunkka_7"
+		"Ability13"		"special_bonus_attack_damage_45"
+		"Ability14"		"special_bonus_unique_kunkka"
+		"Ability15"		"special_bonus_unique_kunkka_4"
+		"Ability16"		"special_bonus_unique_kunkka_3"
+		"Ability17"		"special_bonus_unique_kunkka_5"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 	"npc_dota_hero_lifestealer_ebf"
@@ -435,9 +456,22 @@
 	"npc_dota_hero_wisp_ebf"
 	{
 		"override_hero"			"npc_dota_hero_wisp"
-		"Ability6"				"wisp_sacrifice"
-		
-		"Ability10"				"special_bonus_hp_regen_20"
+
+		"Ability1"		"wisp_tether"
+		"Ability2"		"wisp_spirits"		
+		"Ability3"		"wisp_overcharge"
+		"Ability4"		"wisp_spirits_in"
+		"Ability5"		"wisp_spirits_out"
+		"Ability6"		"wisp_sacrifice"
+		"Ability7"		"wisp_tether_break"
+		"Ability10"		"special_bonus_hp_regen_20"
+		"Ability11"		"special_bonus_unique_wisp_8"
+		"Ability12"		"special_bonus_unique_wisp_3"
+		"Ability13"		"special_bonus_unique_wisp"
+		"Ability14"		"special_bonus_unique_wisp_10"
+		"Ability15"		"special_bonus_hp_24000"
+		"Ability16"		"special_bonus_unique_wisp_9"
+		"Ability17"		"special_bonus_unique_wisp_4"
 		
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -530,7 +564,20 @@
 	"npc_dota_hero_omniknight_ebf"
 	{
 		"override_hero"			"npc_dota_hero_omniknight"
-		"Ability11"			"special_bonus_attack_damage_250"
+		"Ability1"		"omniknight_purification"
+		"Ability2"		"omniknight_martyr"
+		"Ability3"		"omniknight_hammer_of_purity"
+		"Ability4"		"omniknight_degen_aura"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"omniknight_guardian_angel"
+		"Ability10"		"special_bonus_unique_omniknight_5"
+		"Ability11"		"special_bonus_attack_damage_250"
+		"Ability12"		"special_bonus_unique_omniknight_6"
+		"Ability13"		"special_bonus_unique_omniknight_7"
+		"Ability14"		"special_bonus_unique_omniknight_2"
+		"Ability15"		"special_bonus_unique_omniknight_3"
+		"Ability16"		"special_bonus_unique_omniknight_1"
+		"Ability17"		"special_bonus_unique_omniknight_4"
 	}
 
 	"npc_dota_hero_jakiro_ebf"
@@ -567,9 +614,21 @@
 	"npc_dota_hero_chaos_knight_ebf"
 	{
 		"override_hero"			"npc_dota_hero_chaos_knight"
-		
+
+		"Ability1"		"chaos_knight_chaos_bolt"
+		"Ability2"		"chaos_knight_reality_rift"
+		"Ability3"		"chaos_knight_chaos_strike"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"chaos_knight_phantasm"
+		"Ability10"		"special_bonus_unique_chaos_knight_6"
+		"Ability11"		"special_bonus_unique_chaos_knight_2"
+		"Ability12"		"special_bonus_unique_chaos_knight_8"
 		"Ability13"		"special_bonus_strength_240"
-		
+		"Ability14"		"special_bonus_unique_chaos_knight_3"
+		"Ability15"		"special_bonus_unique_chaos_knight"
+		"Ability16"		"special_bonus_unique_chaos_knight_5"
+		"Ability17"		"special_bonus_unique_chaos_knight_4"
 	}
 	"npc_dota_hero_ogre_magi_ebf"
 	{
@@ -685,10 +744,21 @@
 	"npc_dota_hero_skeleton_king_ebf"
 	{
 		"override_hero"			"npc_dota_hero_skeleton_king"
-		
-		"Ability10"				"special_bonus_movement_speed_20"
-		"Ability11"				"special_bonus_attack_speed_45"
-		"Ability14"				"special_bonus_cleave_25"
+
+		"Ability1"		"skeleton_king_hellfire_blast"
+		"Ability2"		"skeleton_king_vampiric_aura"
+		"Ability3"		"skeleton_king_mortal_strike"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"skeleton_king_reincarnation"
+		"Ability10"		"special_bonus_unique_wraith_king_2"
+		"Ability11"		"special_bonus_unique_wraith_king_vampiric_skeleton_duration"
+		"Ability12"		"special_bonus_unique_wraith_king_11"
+		"Ability13"		"special_bonus_unique_wraith_king_6"
+		"Ability14"		"special_bonus_cleave_25"
+		"Ability15"		"special_bonus_unique_wraith_king_5"
+		"Ability16"		"special_bonus_unique_wraith_king_10"
+		"Ability17"		"special_bonus_unique_wraith_king_4"
 	}
 	"npc_dota_hero_centaur_ebf"
 	{
@@ -795,7 +865,21 @@
 	"npc_dota_hero_bane_ebf"
 	{
 		"override_hero"		"npc_dota_hero_bane"
-		"Ability10"		"special_bonus_armor_25"
+		"Ability1"		"bane_enfeeble"
+		"Ability2"		"bane_brain_sap"
+		"Ability3"		"bane_nightmare"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"bane_fiends_grip"
+		"Ability7"		"bane_nightmare_end"
+		"Ability10"		"special_bonus_unique_bane_10"
+		"Ability11"		"special_bonus_mp_regen_20"
+		"Ability12"		"special_bonus_unique_bane_8"
+		"Ability13"		"special_bonus_unique_bane_9"
+		"Ability14"		"special_bonus_unique_bane_5"
+		"Ability15"		"special_bonus_movement_speed_30"
+		"Ability16"		"special_bonus_unique_bane_2"
+		"Ability17"		"special_bonus_unique_bane_3"
 	}
 	"npc_dota_hero_dark_seer_ebf"
 	{
@@ -825,12 +909,62 @@
 	"npc_dota_hero_earthshaker_ebf"
 	{
 		"override_hero"		"npc_dota_hero_earthshaker"
-		"Ability10"		"special_bonus_attack_damage_30"
+
+		"Ability1"		"earthshaker_fissure"
+		"Ability2"		"earthshaker_enchant_totem"
+		"Ability3"		"earthshaker_aftershock"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"earthshaker_echo_slam"
+		"Ability10"		"special_bonus_attack_base_damage_40"
+		"Ability11"		"special_bonus_unique_earthshaker_4"
+		"Ability12"		"special_bonus_unique_earthshaker_totem_damage"
+		"Ability13"		"special_bonus_unique_earthshaker_6"
+		"Ability14"		"special_bonus_unique_earthshaker_2"
+		"Ability15"		"special_bonus_unique_earthshaker_3"
+		"Ability16"		"special_bonus_unique_earthshaker_5"
+		"Ability17"		"special_bonus_unique_earthshaker"
 	}
 	"npc_dota_hero_enchantress_ebf"
 	{
 		"override_hero"		"npc_dota_hero_enchantress"
 		"Ability12"		"special_bonus_attack_damage_450"
+	}
+	"npc_dota_hero_huskar_ebf"{
+		"override_hero"		"npc_dota_hero_huskar"
+
+		"Ability1"		"huskar_inner_fire"
+		"Ability2"		"huskar_burning_spear"
+		"Ability3"		"huskar_berserkers_blood"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"huskar_life_break"
+		"Ability10"		"special_bonus_unique_huskar_3"
+		"Ability11"		"special_bonus_unique_huskar_4"
+		"Ability12"		"special_bonus_unique_huskar_2"
+		"Ability13"		"special_bonus_lifesteal_15"
+		"Ability14"		"special_bonus_unique_huskar_6"
+		"Ability15"		"special_bonus_unique_huskar_7"
+		"Ability16"		"special_bonus_unique_huskar"
+		"Ability17"		"special_bonus_unique_huskar_5"
+	}
+	"npc_dota_hero_rattletrap_ebf"{
+		"override_hero"		"npc_dota_hero_rattletrap"
+
+		"Ability1"		"rattletrap_battery_assault"
+		"Ability2"		"rattletrap_power_cogs"
+		"Ability3"		"rattletrap_rocket_flare"
+		"Ability4"		"rattletrap_overclocking"
+		"Ability5"		"rattletrap_jetpack"
+		"Ability6"		"rattletrap_hookshot"
+		"Ability10"		"special_bonus_unique_clockwerk_7"
+		"Ability11"		"special_bonus_unique_clockwerk_9"
+		"Ability12"		"special_bonus_hp_5000"
+		"Ability13"		"special_bonus_unique_clockwerk_3"
+		"Ability14"		"special_bonus_all_stats_2500"
+		"Ability15"		"special_bonus_unique_clockwerk_2"
+		"Ability16"		"special_bonus_unique_clockwerk_6"
+		"Ability17"		"special_bonus_unique_clockwerk"
 	}
 	"npc_dota_hero_furion_ebf"
 	{

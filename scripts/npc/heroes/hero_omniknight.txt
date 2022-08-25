@@ -163,12 +163,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"		"40 99 250 610 1550 3750 9200"
+				"bonus_str"		"60 380 1250 3110 5550 7750 10000"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen"		"80 180 405 915 2100 4650 10500"
+				"hp_regen"		"120 280 805 2215 4100 8650 15500"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -335,11 +335,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"duration"					"5.0 5.5 6.5 7.0 8.0 9.0"
+				"duration"					"5.0 5.5 6.5 7.0 8.0 9.0 10.0"
 				"radius"					"1200"
 				"duration_scepter"
 				{
-					"value"		"8.0 9.0 10.0"
+					"value"		"8.0 9.0 10.0 11.0 12.0 13.0 14.0"
 					"RequiresScepter"		"1"
 				}
 				"scepter_status_resist"					
@@ -453,7 +453,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"1150"
+				"value"				"3"
 				"ad_linked_abilities"			"omniknight_martyr"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}

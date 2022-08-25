@@ -85,32 +85,19 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"buff_duration"				"8"
-				
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_movement_speed"		"30"
-				
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_speed"		"200"
-				
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"debuff_duration"		"4"
-				
-			}
+			"buff_duration"					"8"
+			"bonus_movement_speed"			"0"
+			"bonus_attack_speed"			"250"
+			"debuff_duration"				"4"
+			"hookshot_damage_bonus_pct"		"0"
+			"hookshot_radius_bonus_pct"		"50"
+			"hookshot_duration_bonus_pct"	"50"
+			"rocket_flare_interval"				"0.15"
+			"rocket_flare_offset_pct"		"125"
+			"rocket_flare_rockets"				"2"
+			"rocket_flare_cooldown"				"3"
 		}
 	}
 
@@ -133,7 +120,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"24 22 20 18"
+		"AbilityCooldown"				"24 22 20 18 16 14 12"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -149,30 +136,21 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"radius"			"275 275 275 275"
-			}
-			"02"
+			"radius"			"500"
+			"duration"					"10.5 11.0 11.5 12.0 12.5 13 13.5"
+			"interval"
 			{	
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"10.5 11.0 11.5 12.0 12.5"
+				"value"								"0.7"
+				"special_bonus_unique_clockwerk"		"-0.25"
 			}
-			"03"
+			"damage"
 			{	
-				"var_type"			"FIELD_FLOAT"
-				"interval"			"0.7 0.7 0.7 0.7"
-				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk"
+				"value"									"200 495 1250 3050 7550 19000 46000"
+				"special_bonus_unique_clockwerk_3"		"+4000"
 			}
-			"04"
-			{	
-				"var_type"			"FIELD_INTEGER"
-				"damage"			"200 495 1250 3050 7550 19000 46000"
-				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_3"
-			}
+			"creep_damage_multiplier"					"1"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
@@ -208,29 +186,35 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"duration"			"5.0 6.0 7.0 8.0"
-				"damage"		"500 1300 3300 8300 21500 54000 14000"
-				"mana_burn"		
-				{
-					"value"				"100 400 700 1000 1300 1600 19000"
-					"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_8"
-				}
-				"attacks_to_destroy"	
-				{
-					"value"					"2"
-					"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_5"
-				}
-				"push_length"		"300"
-				"push_duration"		"1"
-				"cogs_radius"			"215"
-				"trigger_distance"			"185"
-				"extra_pull_buffer"			"-10"
-				"bonus_armor"		"0"
-				"leash"			
-				{
-					"value"			"0"
-					"special_bonus_unique_clockwerk_2"	"+1"
-				}
+			"duration"			"4.0 4.5 5.0 6.0 7.0 7.5 8.0"
+			"damage"		"500 1300 3300 8300 21500 54000 14000"
+			"mana_burn"		
+			{
+				"value"				"100 400 700 1000 1300 1600 19000"
+				"special_bonus_unique_clockwerk_8"		"+1000"
+			}
+			"attacks_to_destroy"	
+			{
+				"value"					"6"
+				//"special_bonus_unique_clockwerk_5"		"+2"
+			}
+			"push_length"		"300"
+			"push_duration"		"1"
+			"cogs_radius"			"215"
+			"trigger_distance"			"185"
+			"extra_pull_buffer"			"-10"
+			"bonus_armor"		"0"
+			"leash"			
+			{
+				"value"			"0"
+				"special_bonus_unique_clockwerk_2"	"+1"
+			}
+			"AbilityCooldown"				
+			{
+				"value"			"15"
+				"special_bonus_unique_clockwerk_9"		"-2"
+			}
+
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
@@ -275,11 +259,15 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"radius"			"600"
-				"duration"			"6.0"
-				"speed"				"2250"
-				"vision_radius"		"600"
-				"damage"			"800 1800 4050 9150 21000 46500 105000"
+			"radius"			"600"
+			"duration"			"6.0"
+			"speed"				"2250"
+			"damage"			"800 1800 4050 9150 21000 46500 105000"
+			"AbilityCooldown"				
+			{
+				"value"				"20.0 18.0 16.0 14.0"
+					"special_bonus_unique_clockwerk_7" "-2"
+			}
 		}
 		
 	}
@@ -327,17 +315,17 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"latch_radius"		"125 125 125"
+				"latch_radius"		"125"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stun_radius"		"175 175 175"
+				"stun_radius"		"275"
 			}
 			"03"
 			{	
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"1.5 1.6 1.7 1.75 1.9 2.0"
+				"duration"			"3.0"
 			}
 			
 			"04"
@@ -349,12 +337,6 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"damage"			"750 6900 36000 115000 220000 350000"
-			}
-			"06"
-			{	
-				"var_type"			"FIELD_FLOAT"
-				"cooldown_scepter"	"12.0 12.0 12.0"
-				"RequiresScepter"			"1"
 			}
 		}
 	}
@@ -368,18 +350,7 @@
 		"ID"					"5977"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"value"				"-0.25"
-				"ad_linked_abilities"			"rattletrap_battery_assault"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
+
 	}
 
 
@@ -416,7 +387,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"12000"
+				"value"				"24"
 				"ad_linked_abilities"			"rattletrap_battery_assault"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -458,18 +429,7 @@
 		"ID"					"502"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"2"
-				"ad_linked_abilities"			"rattletrap_power_cogs"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
+		"BaseClass"						"special_bonus_base"
 	}
 
 
@@ -483,18 +443,7 @@
 		"ID"					"614"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"0"
-				"ad_linked_abilities"			"rattletrap_power_cogs"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
+		"BaseClass"						"special_bonus_base"
 	}
 
 		//=================================================================================================================
@@ -507,22 +456,11 @@
 		"ID"					"850"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"2"
-				"ad_linked_abilities"			"rattletrap_rocket_flare"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
+		"BaseClass"						"special_bonus_base"
 	}
 
 
-		//=================================================================================================================
+	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
 	"special_bonus_unique_clockwerk_8"
@@ -532,17 +470,18 @@
 		"ID"					"851"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
+		"BaseClass"						"special_bonus_base"
+	}
+		//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_clockwerk_9"
+	{
+		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"1100"
-				"ad_linked_abilities"			"rattletrap_power_cogs"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
+		"ID"					"1080"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
 	}
 }
